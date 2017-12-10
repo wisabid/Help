@@ -1,0 +1,27 @@
+node -v
+
+node --version
+
+npm -v
+
+npm install jslint
+
+
+Pre-requisite – Node js (https://nodejs.org/)
+
+1.	Unzip datascreen.zip (PFA for the latest one) file to a location in your machine
+ 
+2.	Checkout from https://openge.ge.com/svn/omd/branches/MRO_Phase3_Hybrid_NewDB_Release1/RMDWeb and copy/merge components, css, fonts and js with datascreen\public\DataTable location. Make sure you are merging with existing contents. The structure would look like as follows – 
+
+ 
+3.	Go to datascreen folder (root folder where server.js file lie) in Command prompt
+4.	Key in the following command
+node server.js
+5.	You will see something like this – 
+Simple static server listening at http://localhost:4567
+6.	Open Chrome browser and hit http://localhost:4567/DataTable/customdatatable.html in the url and you are done!
+
+
+
+
+jetbrains IDE

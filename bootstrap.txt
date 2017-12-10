@@ -1,0 +1,215 @@
+Align a h1 tag at the centre
+	add class="text-center" to it
+
+
+Loading Button and spin
+	beforeSend:function(data){
+						$container.find('#caseActions .btn-submit').button('loading');
+						$('#caseActions').spin({
+                            zIndex: 1e3
+                        });  
+					},
+
+Reset a loading button
+$mainmodal.find('.btn-submit').button('reset');
+
+tooltip and popover
+
+
+
+
+Bootstrap modal - disable dismissing of modal clicking outside teh content area
+	$.fn.modal.defaults.backdrop = 'static';
+
+
+
+Tooltip for multiselect option
+------------------------------
+	$('.multiselect-container li').not('.filter, .group').tooltip({
+    placement: 'right',
+    container: 'body',
+    title: function () {
+        // put whatever you want here
+        var value = $(this).find('input').val();
+        return 'Has Value of ' + value;
+    }
+});
+
+
+Selecting a value in multiselect
+$el.val(0); //0 is the value of radio button inside mulitselect
+					if($el.is('select')){
+						$el.multiselect('refresh');
+					}
+
+
+
+Displaying bootstrap multiselect drop down on a bootstrap modal 
+	set overflow-y:visible for div containing the class modal-body	
+	Done!!
+
+
+
+
+FORM LAYOUT
+FORM ELEMENTS IN HORIZONTAL FASHION
+...................................
+
+<div class="row-fluid">	
+	<form class="form-horizontal ">
+		<div class="row-fluid">
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>	
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+		</div>
+		<div class="row-fluid">
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>	
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+		</div>
+
+	</form>
+
+</div>
+
+
+FORM ELEMENTS CONTAINING DATA VALUES
+....................................
+
+<div class="row-fluid">	
+	<form class="form-horizontal ">
+		<div class="row-fluid">
+				<div class="control-group span3 text-right" style="padding-top:5px;">
+					<span class="data-label">Fault Origin : </span>
+					ABID SHAMIM
+				</div>	
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+		</div>
+		<div class="row-fluid">
+				<div class="control-group span3 text-right" style="padding-top:5px;">
+					<span class="data-label">Fault Origin : </span>
+					ABID SHAMIM
+				</div>	
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+				<div class="control-group span3 faultOriginSelect">
+					<label class="control-label">Fault Origin</label>
+					<div class="controls">
+						<select></select>
+						<p class="help-block"></p>
+					</div>
+				</div>
+		</div>
+	</form>
+
+</div>
+
+
+FORM ELEMENTS IN DIFFERENT LINES
+................................
+<form class="form-horizontal">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label" for="input01" style="width:100px;">Text Label</label>
+							<div class="controls" style="margin-left:110px;">
+								<input type="text" class="input-small" id="input01">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="select01" style="width:100px;">Select Label</label>
+							<div class="controls" style="margin-left:110px;">
+								<select id="select01" class="input-small">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-actions" style="padding-left:110px;">
+							<button class="btn">Cancel</button>
+							<button type="submit" class="btn btn-primary">Save</button>
+						</div>
+					</fieldset>
+/form>
+
+FORM INLINE
+...........
+<form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit" class="btn">Sign in</button>
+</form>
+
+
+FORM LINE BY LINE
+-----------------
+<form>
+  <label>Label name</label>
+  <input type="text" class="span3" placeholder="Type something…">
+  <p class="help-block">Example block-level help text here.</p>
+  <label class="checkbox">
+    <input type="checkbox"> Check me out
+  </label>
+  <button type="submit" class="btn">Submit</button>
+</form>
+
+	

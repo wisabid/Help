@@ -1,0 +1,66 @@
+npm config set proxy http://212340778:password.http-proxy.trans.ge.com    
+  
+npm config set https-proxy http://212340778:password.http-proxy.trans.ge.com     
+
+npm install jslint -g
+
+
+C:\xampp\htdocs\MDSC_Release2\js\app\healthcheck>jslint  healthcheck.js
+
+
+
+To know your node js proxy settings :
+From the NODE JS command line 
+>.npmrc
+
+Open in notepad to see the settings
+
+
+
+
+As On April 3, 2016, use the following commands for settings npm proxies
+	C:\Users\212340778>npm config set proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+
+	C:\Users\212340778>npm config set https-proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+Ref : http://jjasonclark.com/how-to-setup-node-behind-web-proxy/
+
+Done!!
+
+To know versions
+	node -v
+	npm -v
+	npm cordova -v
+
+To update npm 
+	npm install -g npm
+
+npm cache clean
+
+Might be useful
+	npm config set registry https://registry.npmjs.org/
+	npm install -g minimatch@3.0.2
+
+
+
+
+
+To Install Ionic 1st install node js and then
+	npm install -g cordova
+	and then install ionic
+		npm install -g ionic
+
+
+How to unset npm config proxy
+	npm config delete proxy
+	npm config delete https-proxy
+
+
+npm clear cache
+
+
+
+
+
+

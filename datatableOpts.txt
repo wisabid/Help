@@ -1,0 +1,380 @@
+For disabling drag drop of columns
+	'sDom': "Trt<'table-controls'<'pull-left'l><'pull-right'ip>>"
+
+check for data exists in datatable
+	var pdTable = pdTable.dataTable();
+	var tbllength = pdTable.fnSettings().aoData.length;
+
+
+Table tag for datatable
+	<table id="itest-table" cellpadding="0" cellspacing="0" border="0" class="table table-bordered" data-table-name="itest-table">
+
+
+Column filtering in datagrid ----> 'filter':true is the key
+
+	$('table[data-table-name="dt-ajax-objects"]', $tabPane).iidsBasicDataGrid({
+					'aoColumns': [{
+						'sTitle': 'Day',
+						'mData': 'creationDate',
+						'sClass': 'essential',
+						'filter':true
+					}, {
+						'sTitle': 'Customer',
+						'mData': 'customerName',
+						'sClass': 'essential',
+						'filter':true
+					}, {
+						'sTitle': 'Rx Title',
+						'mData': 'faultDesc',
+						'sClass': 'optional',
+						'filter':true
+					}, {
+						'sTitle': 'Faults',
+						'mData': 'faultCount',
+						'sClass': 'essential',
+						'filter':true
+					}],
+					'sAjaxSource': 'data/oil-rx-table-sample.json',
+					'useFloater': false,
+					'isResponsive': true
+				});
+
+
+Json response directly from javascript n not thru ajax
+	$('table[data-table-name="dt-ajax-objects"]', $tabPane).iidsBasicDataGrid({
+					'aoColumns': [{
+						'sTitle': 'Day',
+						'mData': 'creationDate',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Customer',
+						'mData': 'customerName',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Rx Title',
+						'mData': 'faultDesc',
+						'sClass': 'optional',
+						'filter': true
+					}, {
+						'sTitle': 'Faults',
+						'mData': 'faultCount',
+						'sClass': 'essential',
+						'filter': true
+					}],
+					'aaData': resultOilRxTableObj.aaData,
+					// 'sAjaxSource': resultOilRxTableObj,
+					'useFloater': false,
+					'isResponsive': true
+				});
+
+
+change NO data available in table   ("sEmptyTable" is the key)
+	$('table[data-table-name="dt-ajax-objects"]', $tabPane).iidsBasicDataGrid({
+					'aoColumns': [{
+						'sTitle': 'Day',
+						'mData': 'creationDate',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Customer',
+						'mData': 'customerName',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Rx Title',
+						'mData': 'faultDesc',
+						'sClass': 'optional',
+						'filter': true
+					}, {
+						'sTitle': 'Faults',
+						'mData': 'faultCount',
+						'sClass': 'essential',
+						'filter': true
+					}],
+					'aaData': resultOilRxTableObj.aaData,
+					// 'sAjaxSource': resultOilRxTableObj,
+					'useFloater': false,
+					'isResponsive': true,
+					"oLanguage": {
+    "sInfo": 'Showing _END_ Sources.',
+    "sInfoEmpty": 'No entries to show',
+    "sEmptyTable": "No Sources found currently, please add at least one.",
+}
+});
+
+
+fnDrawcallback
+	$('table[data-table-name="dt-ajax-objects"]', $tabPane).iidsBasicDataGrid({
+					'aoColumns': [{
+						'sTitle': 'Day',
+						'mData': 'creationDate',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Customer',
+						'mData': 'customerName',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Rx Title',
+						'mData': 'faultDesc',
+						'sClass': 'optional',
+						'filter': true
+					}, {
+						'sTitle': 'Faults',
+						'mData': 'faultCount',
+						'sClass': 'essential',
+						'filter': true
+					}],
+					'aaData': resultOilRxTableObj.aaData,
+					// 'sAjaxSource': resultOilRxTableObj,
+					'useFloater': false,
+					'isResponsive': true,
+					"oLanguage": errObj,
+					'fnDrawCallback': function(nRow, aData, iDisplayIndex) {
+						/* calls everytime */
+							
+						
+						return nRow;
+					},
+				});
+
+
+Default Sorting of datatable based on a particular column ('aaSorting': [[0,'desc']] is the key)
+	$oilRxTable.iidsBasicDataGrid({
+					'aoColumns': [{
+						'sTitle': 'Date',
+						'mData': 'creationDate',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Customer Name',
+						'mData': 'customerName',
+						'sClass': 'essential',
+						'filter': true
+					}, {
+						'sTitle': 'Rx Title',
+						'mData': 'recommTitle',
+						'sClass': 'optional',
+						'filter': true
+					}, {
+						'sTitle': 'Count',
+						'mData': 'faultCount',
+						'sClass': 'essential',
+						'filter': true
+					}],
+					'aaData': resultOilRxTableObj.aaData,
+					'useFloater': false,
+					'isResponsive': true,
+					'aaSorting': [[0,'desc']]
+				});
+
+
+
+Disable Column sorting from datatavble
+	dataTableObject = {
+					
+					"bSort": false
+				},
+
+
+
+Displayed rows in one page with pagination
+	"iDisplayLength": 5,
+
+Disable Pagination
+	"bPaginate": false,
+
+
+Datatable Fixed Header with vertical scroll (sScrollY)
+...........................................
+$TOTable.iidsBasicDataGrid({
+						useFloater: false,
+						"iDisplayLength": options.defaultRecords,
+						"aLengthMenu": pageLen,
+						
+						'sDom': "Trt<'table-controls'<'pull-left'l><'pull-right'ip>>",
+						"iDisplayLength": 5,
+						"bPaginate": false,
+						'sScrollY': '105px',
+						"bAutoWidth": false,
+						"bInfo": false,
+						"aaSorting": []
+					}).off('click', 'tbody tr');
+
+
+NB : "bAutoWidth": false is a must for avoiding auto width in scrollbody
+
+
+.dataTable() is also needed to solve the alignment problem after fixing the header
+.................................................................................
+
+$TOTable.iidsBasicDataGrid({
+							useFloater: false,
+							"iDisplayLength": options.defaultRecords,
+							"aLengthMenu": pageLen,
+							//										"aoColumns" : [ null, null, null, null,
+							//												null, null, null, null, null, null,
+							//												null, null ],
+							'sDom': "Trt<'table-controls'<'pull-left'l><'pull-right'ip>>",
+							"iDisplayLength": 5,
+							"bPaginate": false,
+							'sScrollY': '105px',
+							"bAutoWidth": false,
+							"bInfo": false,
+							"aaSorting": []
+						}).dataTable()
+
+
+
+
+Get row based on row index
+---------------------------
+
+$cbrNode = $($table.fnGetNodes(val.rowI - 1));
+
+this.rowIndex;
+
+fnGetData( rowIndex  )
+
+
+
+
+Width for columns
+-----------------
+
+$TOTable.iidsBasicDataGrid({
+							useFloater: false,
+							"iDisplayLength": options.defaultRecords,
+							"aLengthMenu": pageLen,
+							"aoColumns": [{
+								"sWidth": "5%"
+							}, {
+								"sWidth": "37%"
+							}, {
+								"sWidth": "3%"
+							}, {
+								"sWidth": "5%"
+							}, {
+								"sWidth": "5%",
+							}, {
+								"sWidth": "5%"
+							}, {
+								"sWidth": "15%"
+							}, {
+								"sWidth": "5%"
+							}, {
+								"sWidth": "5%"
+							}, {
+								"sWidth": "5%"
+							}, {
+								"sWidth": "5%"
+							},
+							{
+								"sWidth": "5%"
+							}],
+							//	
+
+
+Datatable column resizing
+	var cid = $container.attr('id');
+						TOdataTable.fnAdjustColumnSizing;
+						$(window).off('resize.toolOutput' + cid).on('resize.toolOutput' + cid, function() {
+							var $table2 = $container.find('.tooloutput-table[id]');
+							if ($table2.length > 0 && TOdataTable) {
+								TOdataTable.fnAdjustColumnSizing();
+							}
+						});	
+
+
+
+DO the same on show of modal window	
+	oTableAssign.fnAdjustColumnSizing();
+$modal.on('shown', function(){
+oTableAssign.fnAdjustColumnSizing(); });
+var cid = $container.attr('id');
+$(window).off('resize.assignUsers' + cid).on('resize.assignUsers' + cid, function() {
+                           var $table2 = $container.find('#assign-case-user-names[id]');
+                           if ($table2.length > 0 && oTableAssign) {
+                            oTableAssign.fnAdjustColumnSizing();
+                           }
+                       });
+
+
+
+how-to-avoid-multiple-radio-buttons-selection-when-paginating-a-table ( fnDrawCallback is the key)
+-------------------------
+$(document).ready(function () {
+        var oTable = $('#example').dataTable({
+            "bJQueryUI": true,
+            "sPaginationType": "full_numbers",
+            "fnDrawCallback": function(oSettings) {
+        $(".<<class name used on the radio button>>").prop('checked', false);
+         }
+        });
+ fnDrawCallback will be called every time when the table is redrawn 
+    });
+
+
+
+Disable Row click and enable td click by adding hyperlinks to 1st td
+--------------------------------------------------------------------
+var tableAssetCases=$table.iidsBasicDataGrid({
+						 "bInfo":false,
+						useFloater: false,
+						"isResponsive": true,
+						'bPaginate': false,
+						"aoColumns":[{ "sWidth": "10%" },{ "sWidth": "37%" },{ "sWidth": "15%" },{ "sWidth": "15%" },{ "sWidth": "15%" },{ "sWidth": "8%" }],
+						"sScrollY":populateTableHeight+'px',                           
+						"aaSorting": [],
+						"fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+							// Make Case Id Hyperlink
+							if (aData[0]) {
+								$('td:eq(0)', nRow).html('<a href="#"><u>'+aData[0]+'</u></a>');
+							}
+						}
+					}).dataTable().off('click', 'tbody tr td:nth-child(1)').on('click', 'tbody tr td:nth-child(1)', function () {
+						var that = this.parentElement;
+						options.caseId=$(that).attr('data-caseId');
+						$container.parents('.stickypane').attr('data-opencaseid',options.caseId);
+						options.currentCaseOwner=$(that).attr('data-owner');
+						options.caseObjid=$(that).attr('data-caseobjid');
+						populateTable(container,options);
+						//displayCaseStickyNotes(options,options.caseId);
+						displayViewNotesModal(options);
+					});
+
+
+Hide popovers in Datatable pagination (fnRowCallback": is the key)
+-------------------------------------
+cLtable = $clTable.iidsBasicDataGrid(
+									{
+									useFloater: false,
+									"iDisplayLength": options.defaultRecords,
+									"aLengthMenu": pageLen,
+									"sScrollY": tableScroll + "px",
+									"bInfo": true,
+									"bAutoWidth": false,
+									'bPaginate': true,
+									"isResponsive": true,
+									"aoColumns": [{"sWidth":"7%"},
+												  {"sWidth":"7%"},
+												  {"sWidth":"8%"},
+												  {"sWidth":"7%"},
+												  {"sWidth":"7%"},
+												  {"sWidth":"12%"},
+												  {"sWidth":"6%"},
+												  {"sWidth":"6%"},
+												  {"sWidth":"19%"},
+												  {"sWidth":"8%"},
+												  {"sWidth":"12%"}
+											      ],
+									'sDom' : "Trt<'table-controls'<'pull-left'l><'pull-right'ip>>",
+									"aaSorting": [],
+									"fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+										// Hide all pop overs
+										$('.popover').hide();
+									}
+								}).dataTable().off('click', 'tbody tr');

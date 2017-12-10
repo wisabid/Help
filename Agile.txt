@@ -1,0 +1,46 @@
+deliver incrementally
+for better quality
+reduce waste
+plan better
+
+
+
+scrum 
+kanban
+xp
+
+
+Delivery team of 9 members - estimates and plans the sprint
+scrum master - leader protects the process
+Product Owner - sets expectations
+Agile Manager - manages prduct owners
+
+
+
+
+
+Sprint or Iteration - 2 to 4 weeks
+Release - 4 or 6 sprints
+
+Product Backlog
+Sprint backlog - those wich r not completed in last sprint
+
+Sprint planning produces sprint backlog
+
+Sprint starts with product backlogs wich are user stories and defects
+
+Pdt owner ranks the product backlog
+
+
+A User story example written on a sticky note is :
+As a [user who benefits]
+I want [feature, function, or ability]
+So that [value gained from function]
+
+- Owned by: Abid
+-Size : 8 points
+
+Stories r end goals
+
+
+defined - in progress - completed - accepted

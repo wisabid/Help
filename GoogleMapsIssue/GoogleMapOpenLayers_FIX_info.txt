@@ -1,0 +1,24 @@
+Ref : https://github.com/openlayers/ol2/issues/1450
+
+JimBacon commented on Oct 7
+Cancel the above. This fails when layers are made invisible and then visible again, as when switching layers. When the layer is made invisible the container is removed from the DOM and the OL viewPortDiv is moved. We have to make sure these are put back when the layer is made visible again. My new version is as follows:
+
+if (container.parentNode !== map.div) {
+    if (!cache.rendered) {
+        var me = this;
+        google.maps.event.addListenerOnce(this.mapObject, 'tilesloaded', function() {
+            cache.rendered = true;
+            me.setGMapVisibility(me.getVisibility());
+            me.moveTo(me.map.getCenter());
+            cache.googleControl.appendChild(map.viewPortDiv);
+        });
+    } else {
+        cache.googleControl.appendChild(map.viewPortDiv);
+    }
+    map.div.appendChild(container);
+    google.maps.event.trigger(this.mapObject, 'resize');
+}
+The minified version is
+
+if(!b.rendered){var h=this;google.maps.event.addListenerOnce(this.mapObject,"tilesloaded",function(){b.rendered=!0;h.setGMapVisibility(h.getVisibility());h.moveTo(h.map.getCenter());b.googleControl.appendChild(c.viewPortDiv)})}else{b.googleControl.appendChild(c.viewPortDiv)}c.div.appendChild(e),google.maps.event.trigger(this.mapObject,"resize");}
+this.mapObject.setMapTypeId(d)}else

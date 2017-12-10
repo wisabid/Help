@@ -1,0 +1,25 @@
+Appending to a container element
+	healthChkDetsObj = {locoNumber : value.locoNumber, lastReqTime : value.lastReqTime, lastRespTime : value.lastRespTime, requestedBy : value.requestedBy};
+		        					healthChkDetsContainer = healthChkDetsTemplate(healthChkDetsObj);
+		        					$(healthChkDetsContainer).appendTo('.health-check .module-footer');
+
+
+
+Looping in handlebar
+--------------------
+	<script id="last-fault-occur-template" type="text/x-handlebars-template">
+    <hr>
+    <div class="fault-occur">
+      {{#each faultOccurs}}
+        <p class="voice voice-data caption lastFOccur">Last NT EOA Fault Date & Time ({{controllerConfig}}): {{lastFaultOccur}}</p>
+      {{/each}}
+    </div>
+  </script>
+
+eoaFaultStatNTObj = {spanCount : 'span6', chartId : 'eoa-fault-counts-NT', chartType : 'chartNT', lastFaultOccur : false, lastFaultOccurObj : {faultOccurs: [
+	{ controllerConfig : "Abid", lastFaultOccur : 124 },
+	{ controllerConfig : "Shamim", lastFaultOccur : 234 },
+	{ controllerConfig : "PM", lastFaultOccur : 456 }
+
+]}},
+            faultCountNTContainer = faultCountTemplate(eoaFaultStatNTObj),

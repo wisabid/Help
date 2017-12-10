@@ -1,0 +1,146 @@
+Demos
+	http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxgrid/
+
+Autorowheight
+	http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxgrid/autorowheight.htm?arctic
+
+Auroresizecolumns n selectionmode
+	http://www.jqwidgets.com/community/topic/autosize-columns-in-grid/
+
+
+Column Properties
+	align
+:
+"left"
+cellclassname
+:
+""
+cellsalign
+:
+"center"
+cellsformat
+:
+""
+classname
+:
+""
+columntype
+:
+null
+datafield
+:
+"GPS_LON_DISPLAY"
+editable
+:
+true
+exportable
+:
+true
+groupable
+:
+true
+hidden
+:
+false
+hideable
+:
+true
+maxwidth
+:
+"auto"
+menu
+:
+true
+minwidth
+:
+25
+nullable
+:
+true
+pinned
+:
+false
+resizable
+:
+true
+sortable
+:
+true
+text
+:
+"Lat/Long"
+width
+:
+80
+
+
+
+cell callback
+	http://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxgrid/jquery-grid-cellsrendering.htm
+	http://www.jqwidgets.com/community/topic/how-can-i-show-something-in-the-grid-cell/
+
+
+
+Virtual mode and row rendering
+	http://www.jqwidgets.com/community/topic/jqxgrid-row-rendering-in-virtualmode/
+
+rendered
+	rendered : function () {
+    if (this.host != null) {
+      var rows = this.host.find('div[role=row]');
+      rows.addClass('my-extra-css-class');
+    }
+  }
+Ref : http://www.jqwidgets.com/community/topic/question-regarding-rendered-callback/
+
+
+
+jqx-all
+	https://www.jqwidgets.com/jquery-widgets-documentation/documentation/requirejs/requirejs_tutorial.htm
+
+
+sorting demo
+	http://127.0.0.1:8887/demos/jqxgrid/sorting.htm
+
+
+jqxgrid
+	http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxgrid/#demos/jqxgrid/sorting.htm
+
+
+rowData as the last param for cellrenderer method
+	http://www.jqwidgets.com/community/topic/cellrenderer-based-on-another-column-value/
+
+getcelltextbyid - Ref:http://jsfiddle.net/jqwidgets/FWdLv/
+     var value = $('#jqxgrid').jqxGrid('getcelltextbyid', rowID, "firstname");
+
+getcellvalue
+	http://jsfiddle.net/jqwidgets/pyE55/
+
+
+hide column
+	$('#jqxGrid').jqxGrid('hidecolumn', 'columndatafield');
+
+jqxgrid API
+	http://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxgrid/jquery-grid-api.htm?search=
+
+getrowdata
+	var theStatus = $("#jqxgrid").jqxGrid('getrowdata', row).StatusID;
+	Ref: http://www.jqwidgets.com/community/topic/how-to-set-the-color-of-one-cell-depending-on-the-value-of-another-cell/
+
+refresh cells
+	$("#refresh").click(function () {
+                source.localdata = generatedata(500);
+                // passing "cells" to the 'updatebounddata' method will refresh only the cells values when the new rows count is equal to the previous rows count.
+                $("#grid").jqxGrid('updatebounddata', 'cells');
+            });
+
+
+getrows
+	$(options.datatable, $container).jqxGrid('getrows').length;
+                        
+grid horizontal scrollbar
+
+	var hScroll = $('.primary-pane[data-tabid=' + paneData.tabId + ']').find('.datascreen-grid').jqxGrid("hScrollBar");
+	hScroll.jqxScrollBar('destroy'); 
+	var vScroll = $('.primary-pane[data-tabid=' + paneData.tabId + ']').find('.datascreen-grid').jqxGrid("vScrollBar");
+	vScroll.jqxScrollBar('destroy'); 

@@ -1,0 +1,35 @@
+IE 8 and below
+--------------
+body {
+ color: red; /* all browsers, of course */
+ color : green\9; /* IE8 and below */
+}
+
+IE 7 and below
+--------------
+body {
+ color: red; /* all browsers, of course */
+ color : green\9; /* IE8 and below */
+ *color : yellow; /* IE7 and below */
+}
+
+
+
+CHROME
+------
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ 
+iframe {height:149%;width:100%} 
+ .iframeTable{height:100%;}
+
+}
+
+mulitple hacks
+---------------
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#form1 {
+		height:100%;
+	}
+	.iframeTable{height:100%;} 
+}

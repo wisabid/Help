@@ -1,0 +1,15 @@
+confirm whethr the module has been downloaded 
+	if (require.defined("js/vendor/bootstrap-datetimepicker.min")) {
+         initDTP();
+         }
+
+eg : var initDTP = function() {
+        	$pp.get(0).ownerDocument.defaultView.$( $pp.get(0) ).find('.input-append.date').datetimepicker();
+        }
+       	
+        w.require(['jquery','js/app/common/customdatatable','js/app/common/customdatatable-fixedheaders',
+                   'js/app/common/color.utils', 'js/vendor/bootstrap-datetimepicker.min'], function(){
+        	if (require.defined("js/vendor/bootstrap-datetimepicker.min")) {
+        		initDTP();
+        	}
+        });

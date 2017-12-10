@@ -1,0 +1,28 @@
+$('<div>', {"class": 'container'}).load('manage-trip.jsp').appendTo('#primary-container')
+
+
+addStickyTab('name', '/stickypage.jsp', 'uniqueid')
+
+function addStickyTab(name, url, tabid){
+	if( $('#'+tabid).length!==0) ){
+		// show that sticky tab
+
+		return;
+	}
+
+	var li = $('<li class="active"><div class="btn-group btn-filter"><a class="btn" data-url="'+url+'" href="#">'+name+'</a><a class="btn btn-fade" href="#"><i class="icon-remove"></i></a></div></li>'),
+		container = $('<div>', {"class": 'stickytabcontianer container', 'tabid': tabid});
+
+
+	container.load(url);
+
+	$('.workspace-navbar').append(li);
+
+
+
+
+
+}
+
+
+<li class="active"><div class="btn-group btn-filter"><a class="btn" href="#">{{name}</a><a class="btn btn-fade" href="#"><i class="icon-remove"></i></a></div></li>

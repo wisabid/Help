@@ -1,0 +1,18 @@
+c# (c sharp)
+-----------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+ The using keyword imports a namespace, and a namespace is a collection of classes. Classes brings us some sort of functionality, 
+
+
+C# is truly an Object Oriented language, every line of code that actually does something, is wrapped inside a class.
+
+Data types are used everywhere in a programming language like C#. Because it's a strongly typed language, you are required to inform the compiler about which data types you wish to use every time you declare a variable,
+
+A class can be static, and it can have static members, both functions and fields. A static class can't be instantiated, 
+
+
+What you can't do in C#, is to let one class inherit from several other classes at the same time. Multiple inheritance, as it's called, is not supported by C#.

@@ -1,0 +1,14 @@
+TO start upload
+	swfu.startUpload();
+
+To know files in queue
+	var obj = swfu.getStats(); console.log(obj.files_queued);if (obj.files_queued == 0) {submitImportForm();}
+
+
+To Block auto uploading
+	go to handler.js of plugin n comment out this.startUpload();
+
+
+Queue complete handler
+	queue_complete_handler
+

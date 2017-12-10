@@ -1,0 +1,182 @@
+git clone  ssh://abid.shamimpm@openge.ge.com/gitroot/locovisionp
+	initial cloning
+
+git
+	to check whether git commands work. if not add git.exe path in environment variable
+
+git --version
+	for version
+
+git status
+	for finding the status
+
+
+git add *.* 
+	for staging all the files to commit later
+
+git add MainWindow.xaml
+	for staging a particular file
+
+
+git commmit -m "commit message"
+	committing the files with commit message
+
+
+git push origin master
+	pushing the committed files to master from origin (local)
+
+
+git push origin branchName
+	pushing the committed files to a particular branch from origin
+
+
+
+git branch
+	to list out all the branches and to know which one is active
+
+
+git branch newBranchName
+	to create a new branch name.
+
+git checkout BranchName
+	for switching out to a particular branch
+
+git checkout -b Branchname origin/Branchname
+	for locally updating the branch created.
+
+git pull origin master
+	for updationg
+
+
+git remote -v
+	for knowin the repo url
+
+
+Forcefully Commit files
+	
+	git push origin master -f
+
+
+As on June 2, 2016
+[REf - Training]
+Scenario : not able 2 push due to some changes in remote
+	git pull --rebase origin master
+	
+then resolve the conflict manually in local files and :
+	git add index.txt
+dont commit..just add as above
+	git rebase --continue
+	git push origin master
+	Done!
+
+
+The same above scenario with fetch(fetch will create a virtual head for doing diff. keep it or leave it by resolving. This would only get rid of conflicts in ur local working dir.instead u can do a diff n take a call)
+	git fetch origin master
+	git diff master origin/master
+	git rebase origin/master
+resolve conflicts manually and 
+	git add .
+	git rebase --continue
+	git push origin master	
+
+
+
+If you have some problem while pulling due to conflicts in the same file that you are going to push
+	git stash
+	git pull origin master
+	git stash list
+	git stash show
+	git stash apply (this will merge all your changed to pulled in latest files)
+
+Go to files and manually resolve all conflicts
+then add and commit and push
+Ref : https://git-scm.com/docs/git-stash
+
+
+or create a new repository on the command line
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.build.ge.com/212340778/MyTestRepo2.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.build.ge.com/212340778/MyTestRepo2.git
+git push -u origin master
+
+
+
+
+
+CREATING BRANCH AND MERGING TO MASTER
+-------------------------------------
+>git branch
+
+
+>git branch branch1
+
+>branch
+
+>git branch
+
+
+
+>git checkout branch1
+
+
+>ls
+
+
+>git status
+
+git add notes.txt
+
+git commit -m "commit on branch"
+
+
+git push origin branch1
+
+git branch
+
+
+>git checkout master   (SHOULD BE IN THE MASTER BRANCH FOR MERGING BRANCH CHANGES TO MASTER )
+
+
+>git merge branch1
+
+
+
+>git push origin master
+
+
+How to get git config settings
+	git config --list
+
+set git proxy
+	git config --global http.proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+	git config --global https.proxy https://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+Unset config
+	git config –-global –-unset http.proxy 
+	git config –-global –-unset https.proxy
+	git config –-global –-unset url."https://".insteadOf
+
+
+How to force https instead of git
+	git config --global url."https://".insteadOf git://
+	Ref : https://coderwall.com/p/sitezg/force-git-to-clone-with-https-instead-of-git-urls
+
+
+
+
+
+	
+	
+	
+
+
+
+
+

@@ -1,0 +1,69 @@
+
+  
+Monday, March 14, 2016 
+Shamimpm, Abid (GE Transportation)  
+wfh? 2:39 PM 
+any idea y the same content bhaves with less performance in popped out window dud? 2:41 PM 
+i guess u r bz 2:46 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+yes, wfh 2:46 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+ok 2:47 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+it's coz the operations happen on child window from the main window.. 2:47 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+any way to optimize it? 2:47 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+so, say jQuery has to check references & other stuff from the child window.. which is slow, I guess 2:48 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+exactly 2:48 PM 
+coz v don add anythin xtra 2:48 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+just check which operations are slow 2:48 PM 
+identify the functions 2:48 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+ok 2:48 PM 
+n then rewriting the functions? 2:48 PM 
+those functions? 2:48 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+and in those functions, try to optimize in such a way that it uses correct references.. 2:49 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+lik? 2:49 PM 
+for eg? 2:49 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+yes, I guess it will mostly be using the appropriate $container & other DOM references 2:49 PM 
+say a function uses $container.. 2:49 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+yeah 2:50 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+that function has to use $container with $ reference from child window 2:50 PM 
+something like `childwindow.$($container)` 2:50 PM 
+I say, identify the $ object first 2:50 PM 
+I think there is some code for that 2:50 PM 
+contentwindow.$ or something like that 2:51 PM 
+and use that reference within the functions 2:51 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+in that case for the main window? 2:51 PM 
+wudnt b ther any prob? 2:51 PM 
+ 
+Raikar, Vinay (GE Transportation)  
+no 2:51 PM 
+$ should be reference for the $ of the window in which the DOM element is present 2:52 PM 
+ 
+Shamimpm, Abid (GE Transportation)  
+ok 2:52 PM 
+

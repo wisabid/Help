@@ -1,0 +1,125 @@
+Google Maps
+-----------
+
+References
+-----------
+
+https://developers.google.com/maps/documentation/javascript/examples/user-editable-shapes
+vinays bin
+	http://output.jsbin.com/qupirubele/1/edit?html,output
+https://developers.google.com/maps/documentation/javascript/examples/polyline-simple
+https://developers.google.com/maps/documentation/javascript/reference#spherical
+
+vinays bin
+	http://output.jsbin.com/rizaxobama/1/edit?html,output
+https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
+
+https://support.google.com/maps/answer/1628031?hl=en
+
+https://developers.google.com/maps/documentation/javascript/drawinglayer
+
+https://developers.google.com/maps/documentation/javascript/geometry
+
+Drawing circle or line on map
+	include <script src="https://maps.googleapis.com/maps/api/js?client=<c:out value="${gmaps_client_id}" />&libraries=drawing,geometry">
+
+
+/* Code for showing up drawing options on a map */
+        var drawingManager = new google.maps.drawing.DrawingManager({
+            drawingMode: google.maps.drawing.OverlayType.MARKER,
+            drawingControl: true,
+            drawingControlOptions: {
+                position: google.maps.ControlPosition.TOP_CENTER,
+                drawingModes: [
+                    google.maps.drawing.OverlayType.CIRCLE,
+                    google.maps.drawing.OverlayType.POLYLINE
+                ]
+            },
+            circleOptions: {
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35,
+                strokeWeight: 2,
+                clickable: false,
+                editable: true,
+                zIndex: 1,
+                editable: true
+            },
+            polylineOptions: {
+                fillColor: '#ffff00',
+                fillOpacity: 1,
+                strokeWeight: 5,
+                clickable: false,
+                editable: true,
+                draggable: true,
+                zIndex: 1
+            }
+        });
+        drawingManager.setMap(mapRef);
+        /* Code for showing up drawing options on a map */
+
+
+
+Get Lat and Long on click of map
+	google.maps.event.addListener(map,'mousemove',function(event) { document.getElementById('latspan').innerHTML = event.latLng.lat() document.getElementById('lngspan').innerHTML = event.latLng.lng() document.getElementById('latlong').innerHTML = event.latLng.lat() + ', ' + event.latLng.lng() }); - See more at: http://vikku.info/programming/google-maps-v3/get-lattitude-longitude-onclick-and-onmouseover-google-map-v3.htm#sthash.t1HiiYzA.dpuf
+
+
+
+Remove NDFD Vector Layer option from Map
+	for that , u need to remove the following node from map-config
+		,
+
+        "WMS": [
+            {
+                "URL": "http://nowcoast.noaa.gov/wms/com.esri.wms.Esrimap/forecasts",
+                "ExternalLayerName": "NDFD Wind Vectors",
+                "IsBaseLayer": false,
+                "TileSize": 512,
+                "DisplayOutsideMaxExtent": false,
+                "WMSParameters": {
+                    "layers": "NDFD_PT_WINDVECT_1_06_G01",
+                    "transparent": true
+                }
+            }
+        ]
+
+Done!
+
+
+
+Adding custom icon markers in IIDX mapping
+	Modify 	components\map-markers\js\map-marker-types.js
+		make new svg icon entries - 
+			 var typeDefinitions = {
+        "default": {
+          translateX: -20.499,
+          translateY: -20.499,
+          popoverOffset: 14,
+          fileName: 'marker_normal.svg'
+        },
+        .
+	.
+	.
+	.
+	.
+
+        "custom-blue": {
+          translateX: -8.499,
+          translateY: -13.499,
+          popoverOffset: 14,
+          fileName: 'blue_train.svg'
+        },
+        "custom-green": {
+          translateX: -8.499,
+          translateY: -13.499,
+          popoverOffset: 14,
+          fileName: 'green_train.svg'
+        },
+        "custom-yellow": {
+          translateX: -8.499,
+          translateY: -13.499,
+          popoverOffset: 14,
+          fileName: 'yellow_train.svg'
+        }
+    };

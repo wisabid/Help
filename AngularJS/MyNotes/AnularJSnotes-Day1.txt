@@ -1,0 +1,142 @@
+ang - 1.2
+Abhinav Gujjar
+
+not compatible with ie 8 and - 
+ie 10, - compatible
+
+SPA Chars
+	no url change
+	back button
+	bookmarking of links
+	offline
+	subsequent reqs only for data
+	htmlis cached
+
+
+
+Philosophy
+
+Ang - v opinionated framework
+	forced u to use MVC pattern
+
+durandal Vs angular
+
+
+Angular used MV* pattern
+	MVP (Presenter), MVC, MVVM
+
+
+
+ang extends HTML vocabulary
+
+
+http://plnkr.co/   - online IDE
+
+
+ang js compiles dom by loading html, head, body etc to DOM...updates DOM
+
+ng-app directive. wat node on the dom contains ng-app?
+
+xpressions {{7+5}}
+
+
+ng-controller
+
+
+	create ad - prepare model and make it availabel to the view
+
+
+$ is the prefix for angular
+	angular internal service names are prefixed with $...a naming convention
+
+
+$scope is bridge between model and view
+
+
+ang gets xecuted document on ready
+
+ang js is forgiving coz an undefined variable in view wil not throw any error
+
+no control flow - no if else in view
+
+
+controller shudnt contain any complex business logic
+
+ang js is pragmatic
+
+
+
+Instructors plnkr
+	http://plnkr.co/edit/Nogpvb?p=preview
+
+
+
+ng-src and ng-href delays the rendering of html avoiding display of curley braces.ng app compiles DOM.kThis html is known as template in angular js terminology & template + data = View. Loose coupling is evident here coz view is just displaying the message instead of retrieving it from DOM as in JQuery. DO not update UI from controller. Do not abuse rootscope. DOM is never exposed to teh controller.
+
+
+
+Two way binding
+	ng-model
+
+
+ng-class-odd and ng-class-even
+ng-show
+
+ng-non-bindable	
+
+
+ngcloak  - prevents early rendering of html elements with ng directives
+
+
+bootstrap div class="col-md-3"
+
+
+bgChecked
+
+
+
+directives - events
+
+
+view wil only communicate with the scope
+
+
+
+ngChange - WARNING
+	angular is state depepentnt (scopes state)
+	ng-model="showHotels" and ng-show="showHotels"
+	where showHotels is undefines/null/0/false
+
+Views do not hold data. view is jz reflecting the data....
+
+
+ANgular seed - scaffolding
+
+bower - client dependency manager
+
+
+angular.module('myApp', []);
+
+angular.module('myApp').controller('topController, function($scope) {
+
+.
+.
+.
+});
+
+npm install dintg work
+
+abhinavgujjar@gmail.com
+
+
+
+Angular filter - | operator
+
+ng-model wud b used by input type text, textarea and select box
+
+
+
+batarang extension for chrome - debug angualr
+
+
+http://plnkr.co/edit/onLmwomBleKqCMmySlHl?p=preview

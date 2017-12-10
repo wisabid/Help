@@ -1,0 +1,35 @@
+ECMASCRIPT 2016 (ES7)
+
+
+npm and bower are package managers
+
+
+“Web Components” is an umbrella term for a bunch of upcoming APIs, and there's more than one
+way to break apart your app into smaller parts. The general idea is for Angular to pragmatically
+adopt new browser features as they become more available.”
+
+
+
+The Polymer project from Google is often mistaken for, and used interchangeably with Web Components.
+Polymer is an application framework that is built on the concept of Web Components, and attempts to polyfill
+certain Web Components APIs (such as Shadow DOM) for browsers where those APIs don't exist.
+
+
+browser compatibility
+issues that Web Components suffer from.
+
+
+At the 2015 Chrome Dev Summit, Google announced that there are now 1 million sites running on Polymer.
+These include some big name companies, such as GE. It also includes many of Google's own internal
+properties, such as Google Play Music.
+
+
+Developers will be expected to know ES6. Learn it. this means the current version is ES 5
+
+
+In web development, a polyfill (or polyfiller) is additional code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape.
+
+
+
+Web components are a collection of specifications that enable developers to create their web applications as a set of reusable components. 
+

@@ -1,0 +1,705 @@
+Reversing the order of legend
+	Add reversed : true in legend object
+	eg : -legend : {
+				layout : 'vertical',
+				align : 'right',
+				verticalAlign : 'top',
+				x : -4,
+				y : 100,
+				floating : true,
+				borderWidth : 1,
+				backgroundColor : '#FFFFFF',
+				shadow : true,
+				reversed: true
+			},
+
+
+
+Align the title and subtitle at the centre
+	title : {
+				text : 'EOA Fault Counts',
+				align : 'center'
+			},
+subtitle : {
+				text : 'NT Locomotives',
+				align : 'center'
+			},
+
+
+
+
+Changing the export context Button in HIghchart
+	exporting : {
+				buttons: {
+					contextButton: {
+						symbol: 'circle',
+                    symbolStrokeWidth: 1,
+                    symbolFill: '#bada55',
+                    symbolStroke: '#330033'
+			        } //eof contextButton
+				}
+			},
+			title : {
+				text : 'EOA Fault Counts
+
+
+
+Set Global options in a page ( to apply a set of options to all charts on the same page)
+	Highcharts.setOptions({
+			chart : {
+				type : 'bar'
+			},
+	        exporting : {
+				buttons: {
+					contextButton: {
+						symbol: 'circle',
+                    symbolStrokeWidth: 1,
+                    symbolFill: '#bada55',
+                    symbolStroke: '#330033'
+			        } //eof contextButton
+				}
+			},
+			legend : {
+				layout : 'vertical',
+				align : 'right',
+				verticalAlign : 'top',
+				x : -4,
+				y : 100,
+				floating : true,
+				borderWidth : 1,
+				backgroundColor : '#FFFFFF',
+				shadow : true,
+				reversed: true
+			},
+			tooltip : {
+				valueSuffix : ' hundreds'
+			},
+			plotOptions : {
+				bar : {
+					dataLabels : {
+						enabled : true
+					}
+				}
+			},
+			credits : {
+				enabled : false
+			},
+	    });
+
+If there are 2 buttons apearing left to context button, to remove those, do the following
+			exporting : {
+				buttons: {
+					exportButton: {
+		                                enabled:false
+                			},
+					printButton: {
+			                    	enabled:false
+                  			}
+				}
+			}
+
+
+Adding font awesome as highcharts context button
+	exporting : {
+				buttons: {
+					contextButton: {
+						// symbol: 'url(img/app/data-request-icon.png)',
+						symbol: 'download',
+						.
+						.
+						.
+					}
+				}
+		}
+
+		// prototype method for integrating font awesome icons into highcharts
+    Highcharts.Renderer.prototype.symbols.download = function(x,y,w,h){
+        return ["M",16.53846153846154,15.819230769230769,"q",0,-0.29531250000000003,-0.21580528846153846,-0.5111177884615384,"t",-0.5111177884615384,-0.21580528846153846,"t",-0.5111177884615384,0.21580528846153846,"t",-0.21580528846153846,0.5111177884615384,"t",0.21580528846153846,0.5111177884615384,"t",0.5111177884615384,0.21580528846153846,"t",0.5111177884615384,-0.21580528846153846,"t",0.21580528846153846,-0.5111177884615384,"z","M",19.446153846153848,15.819230769230769,"q",0,-0.29531250000000003,-0.21580528846153846,-0.5111177884615384,"t",-0.5111177884615384,-0.21580528846153846,"t",-0.5111177884615384,0.21580528846153846,"t",-0.21580528846153846,0.5111177884615384,"t",0.21580528846153846,0.5111177884615384,"t",0.5111177884615384,0.21580528846153846,"t",0.5111177884615384,-0.21580528846153846,"t",0.21580528846153846,-0.5111177884615384,"z","M",20.900000000000002,13.274999999999999,"v",3.634615384615385,"q",0,0.45432692307692313,-0.3180288461538462,0.7723557692307692,"t",-0.7723557692307692,0.3180288461538462,"h",-16.71923076923077,"q",-0.45432692307692313,0,-0.7723557692307692,-0.3180288461538462,"t",-0.3180288461538462,-0.7723557692307692,"v",-3.634615384615385,"q",0,-0.45432692307692313,0.3180288461538462,-0.7723557692307692,"t",0.7723557692307692,-0.3180288461538462,"h",5.281550480769231,"l",1.5333533653846154,1.5447115384615384,"q",0.6587740384615385,0.6360576923076924,1.5447115384615384,0.6360576923076924,"t",1.5447115384615384,-0.6360576923076924,"l",1.5447115384615384,-1.5447115384615384,"h",5.270192307692308,"q",0.45432692307692313,0,0.7723557692307692,0.3180288461538462,"t",0.3180288461538462,0.7723557692307692,"z","M",17.20859375,6.812199519230768,"q",0.1930889423076923,0.4656850961538462,-0.1590144230769231,0.7950721153846154,"l",-5.088461538461539,5.088461538461539,"q",-0.20444711538461538,0.21580528846153846,-0.5111177884615384,0.21580528846153846,"t",-0.5111177884615384,-0.21580528846153846,"l",-5.088461538461539,-5.088461538461539,"q",-0.35210336538461545,-0.32938701923076924,-0.1590144230769231,-0.7950721153846154,"q",0.1930889423076923,-0.44296875,0.6701322115384616,-0.44296875,"h",2.9076923076923076,"v",-5.088461538461539,"q",0,-0.29531250000000003,0.21580528846153846,-0.5111177884615384,"t",0.5111177884615384,-0.21580528846153846,"h",2.9076923076923076,"q",0.29531250000000003,0,0.5111177884615384,0.21580528846153846,"t",0.21580528846153846,0.5111177884615384,"v",5.088461538461539,"h",2.9076923076923076,"q",0.4770432692307693,0,0.6701322115384616,0.44296875,"z"];
+    };
+    // prototype method ends here
+
+
+Keeping the default highcharts exporting button (there shudnt b any symbol option..then u c the default icon)
+	exporting : {
+				buttons: {
+					contextButton: {
+						// symbol: 'url(img/app/data-request-icon.png)',
+						//symbol: 'download',
+	                    symbolStrokeWidth: 1,
+	                    symbolFill: '#eee',
+	                    symbolStroke: '#333',
+
+
+Adding a custom context button for highcharts exporting
+	exporting : {
+				buttons: {
+					contextButton: {
+						symbol: 'url(img/app/data-request-icon.png)',		
+						.
+						.
+						.
+					}
+				}
+		}
+
+
+Credits getting overlapped with x axis labels. how to resolve
+	Add spacingBottom in chart object
+	chart: {
+	                type: 'column',
+	                spacingBottom: 50
+	            },
+
+
+To place legends at the bottom below x axis labels
+	 legend : {
+					layout : 'horizontal',
+					align : 'center',
+					verticalAlign : 'bottom',
+					y : 35,
+					reversed: false
+				},
+
+
+
+Datalabels getting hidden
+	overflow: StringSince 3.0.6
+How to handle data labels that flow outside the plot area. The default is justify, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set crop to false and overflow to "none". Defaults to justify.
+
+eg : 
+	bar : {
+					dataLabels : {
+						enabled : true,
+						crop : false
+					}
+				},	
+
+
+Put datalabels inside the bar
+	plotOptions : {
+				bar : {
+					dataLabels : {
+						enabled : true,
+						align : 'right',
+						color : '#FFFFFF',
+						x : -10,
+						y : -3,
+						crop : false
+					}
+				},
+
+
+Spacing at the right
+	chart : {
+				spacingRight: 20
+			},	
+
+
+
+Conditionally moving Datalabels inside and outside the bar
+	chart : {
+                    type : 'bar',
+                    events: {
+                        load: function(){
+                            // console.log(this.series[0].data);
+                            // console.log('-----------------------');
+                            var chartObj = this,
+                                k;
+
+                            for (k=0;k<chartObj.series.length;k++) {
+                                // console.log('k = '+k,chartObj.series[k].data);
+
+                                $.each(chartObj.series[k].data, function(i, point) {
+                                    console.log('point: ', point);
+                                    if( point.dataLabel.x>(chartObj.chartWidth-150)){
+                                        ppoint.dataLabel.attr({x: point.dataLabel.x - point.dataLabel.width - 2});
+                        		point.dataLabel.css({color: '#FFFFFF'});  //adding color to datalabel
+                                    }
+                                });
+                            }
+                        }
+                    }
+                }
+	this would cause problem when you resize the window. so 
+	chart : {
+                    type : 'bar',
+                    events: {
+                        load: function(){
+                            datalabelFormatter(this);
+                        },
+                        redraw: function(){
+                            datalabelFormatter(this);
+                        }
+                    }
+                },
+
+
+Aligning datalabels in a particular fixed position
+	plotOptions : {
+				bar : {
+					dataLabels : {
+						enabled : true,
+						align : 'left',
+						color : '#000',
+						// x : -10,
+						// y : -3,
+						crop : false,
+						x: 390 //offset
+
+					}
+				}
+
+
+Adding css to point
+	if (point.graphic.width < 15){
+                                point.dataLabel.css({fontSize: '9px'});
+                            }
+
+
+Fixed pointWidth
+	plotOptions : {
+				bar : {
+					pointPadding: 0,
+					groupPadding: 0,
+					pointWidth: 16,
+
+
+If there is less gap between categories of bar chart, increase chart height (to 530 for eg) n also
+			plotOptions : {
+				bar : {
+					pointPadding: 0.0,
+					groupPadding: 0.2,
+					pointWidth: 16,
+
+
+Introducing separator line between categories of x axis (tick)
+	 tickWidth: 1,
+                    tickLength : 10, 
+                    tickPosition: 'inside',
+
+
+Remove floating values(172.0) from tooltip
+	Change the following - 
+		 tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y} </b></td></tr>',
+                    footerFormat: '</table>',
+
+	TO
+
+		 tooltip: {
+	                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                    '<td style="padding:0"><b>{point.y} </b></td></tr>',
+	                footerFormat: '</table>',
+
+
+
+check whether the chart is getting exported
+	events: {
+                        load: function(){
+                            if (this.options.chart.forExport) {
+
+
+
+
+solution for datalabels not getting displayed in downloaded graph issue (settimeout was the root cause)
+	/* this if block is only for export scenario */
+                        if (chartObj.options.chart.forExport) {
+                            if (point.dataLabel != null && point.graphic != null) {
+                                if((point.graphic.height - point.dataLabel.width) < 0){
+                                    point.dataLabel.attr({x: (point.graphic.height)});
+                                    point.dataLabel.css({color: '#000000'});
+                                }
+                                else {
+                                    point.dataLabel.css({color: '#ffffff'});
+                                }
+                            }
+                         }
+                         else {
+                            point.dataLabel.css({display: 'none'});
+                         }
+
+
+hide one item in legend (showInLegend)..color can also be added to a series item
+	 series: [
+                    {
+                        name : 'Faults',
+                        data :[ 137, 21, 405, 32, 68, 90, 70, 55, 25, 98, 40 ],
+                        showInLegend: false
+                    },
+                    {
+                        name : 'Threshold',
+                        color: '#000000',
+                        data : [ 107, 31, 435, 33, 66, 98, 90, 95, 45, 68, 10 ]
+                    }
+                ],
+
+
+TO add separate color for each column 
+	series : [
+		{
+		name : 'Abid',
+		data : [{y: 100, color: red},{y: 120, color: green}, {y: 160, color: yellow}]
+		}
+		];
+	u shud manage this in code level like : 
+		 objects = {},
+                i = 0;
+
+            $.each(loaderConfigObj, function(property, value){
+                if (typeof(value) != "undefined" && value != null && value.hasOwnProperty('loader')) {
+                    loader = value.loader;
+                    faults = value.faults;
+                    threshold = value.threshold;
+                    optObj.xAxis.categories.push(loader);
+                    if (optObj.hasOwnProperty('series')) {
+                            
+                            objects[i] = { y : '', color : '' };
+                            objects[i].y = checkUndef(faults);
+                            
+                            if (faults < threshold) {
+                                loaderFaults.data.color = 'red';
+                                objects[i].color = 'red';
+                            }
+                            else {
+                                objects[i].color = 'green';
+                            }
+                            loaderFaults.data.push(objects[i]);
+
+
+Title or subtitle to float around the plot area
+	subtitle: {
+                    text: '',
+                    align : 'left',
+                    floating: true,
+                    x: 100,
+                    y: 90,
+                    style: {
+                        fontWeight: 'bold'
+                    }
+                },
+	try without floating to find the difference
+
+
+to use html in labelformatter
+	legend : {
+		useHTML : true
+
+Legend Navigation with 1 item per page (work around solution - manipulate y value)
+	 legend: {
+	            layout: 'vertical',
+	            align: 'center',
+	            verticalAlign: 'bottom',
+	            y: -325,
+	            floating: true,
+	            navigation: {
+	            	activeColor: '#3E576F',
+					animation: true,
+					arrowSize: 12,
+					inactiveColor: '#CCC',
+					style: {
+						fontWeight: 'bold',
+						color: '#333',
+						fontSize: '12px'	
+					}
+				}
+	        }
+
+To bring legends top outside the plot area - set title and subtitle
+	optionsObj = {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '.'
+            },
+            subtitle: {
+                text: '.'
+            },
+
+	n then visibility:none
+
+To restrict legend box items width 
+	legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            borderWidth : 1,
+	            borderColor: '#d8d9d8',
+	            verticalAlign: 'bottom',
+	            y: -5,
+	            itemStyle: {
+        				width: 200 // or whatever
+    				},
+
+
+get the same color of plot in tooltip 
+	point.color
+	eg :
+	 tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{point.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y} </b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+
+
+To disable tooltip for a series, use enableMouseTracking: false,
+	series: [{
+					name: 'BNSF',
+					data: [7.0, 6.9, 9.5, null, 18.2, 21.5, 25.2, null, 23.3, 18.3, 13.9, 9.6],
+					color: 'red'
+				}, {
+					name: 'BNSF+',
+					connectNulls: true,
+					dashStyle: 'LongDash',
+					showInLegend: false,
+					color: 'red',
+					lineWidth: 1,
+					linkedTo: ':previous',
+					enableMouseTracking: false,
+					data: [7.0, 6.9, 9.5, null, 18.2, 21.5, 25.2, null, 23.3, 18.3, 13.9, 9.6]
+				}, 
+	
+
+
+linkedTo attribute for a series to link to other series so that when disabled in legend both wud go off
+	series: [{
+					name: 'BNSF',
+					data: [7.0, 6.9, 9.5, null, 18.2, 21.5, 25.2, null, 23.3, 18.3, 13.9, 9.6],
+					color: 'red'
+				}, {
+					name: 'BNSF+',
+					connectNulls: true,
+					dashStyle: 'LongDash',
+					showInLegend: false,
+					color: 'red',
+					lineWidth: 1,
+					linkedTo: ':previous',
+					enableMouseTracking: false,
+					data: [7.0, 6.9, 9.5, null, 18.2, 21.5, 25.2, null, 23.3, 18.3, 13.9, 9.6]
+				}, 
+
+
+To connect null values in the chart
+	series: [{
+					name: 'BNSF',
+					data: [7.0, 6.9, 9.5, null, 18.2, 21.5, 25.2, null, 23.3, 18.3, 13.9, 9.6],
+					color: 'red'
+				}, {
+					name: 'BNSF+',
+					connectNulls: true,
+
+
+
+To connect null values with a dash line: For every series S, create an another auxiliary series S'. S' job is to fill the gaps.	
+Ref - http://stackoverflow.com/questions/16490236/highcharts-change-line-style-in-line-gaps-null
+
+	After creating aux series S', change dashStyle for it to dash(keeping DashStyle as solid for teh actual series). Also add linkedTo (for legend click functionality) and then change lineWidth to suit look and feel
+	Also use enableMouseTracking: false, for disabling tooltip for aux series.	
+
+
+X axis title 
+
+
+
+For highlighting the y-axis points in graph (marker is the key)
+	},
+				credits: {
+					enabled: true
+				},
+				plotOptions: {
+					line: {
+						marker: {
+							enabled: true
+						}
+					}
+				},
+				series: []
+
+
+To disable marker in auxiliary series
+	disable in the individual object that is being pushed to series
+	altObjects[i] = {
+											name: '',
+											connectNulls: true,
+											dashStyle: 'LongDash',
+											marker: {
+												enabled: false
+											},
+											showInLegend: false,
+											//color: 'red',
+											color: Highcharts.getOptions().colors[i],
+											lineWidth: 1,
+											linkedTo: ':previous',
+											enableMouseTracking: false,
+											data: []
+										};
+
+
+Changing the position of exporting context button
+	exporting: {
+					buttons: {
+						contextButton: {
+							x: -85
+						}
+					}
+				},
+
+
+for disabling all legends
+	$('.highcharts-legend .highcharts-legend-item text').click()
+
+
+Highcharts legend colors have a limit of 17 n 18th item is undefined n it continues from ther on
+
+
+
+To display x axis label on right side
+	yAxis: [{
+					min: 0,
+					title: {
+						text: 'Problem Count'
+					}
+				}, {
+					title: {
+						text: 'Profit (millions)'
+					},
+					opposite: true
+				}],
+
+
+
+Set Interval between Axis Points
+	yAxis: {
+	    minTickInterval: 10,
+            tickInterval: 0.01
+        },
+
+
+Tooltip Positioner
+	tooltip: {
+					valueSuffix: ' ',
+					positioner: function(boxWidth, boxHeight, point) {
+						return {
+							x: point.plotX + 20,
+							y: point.plotY - 20
+						};
+					}
+				}
+
+
+style for legend items
+	legend: {
+					
+					itemStyle: {
+						fontFamily: 'Verdana'
+					}
+				},
+
+
+
+For removing the connecting line from points, jz set lineWidth to zero in plot options
+	plotOptions: {
+				spline: {
+					marker: {
+						enabled: true,
+						radius: 4,
+						lineColor: '#666666',
+						lineWidth: 1,
+						connectEnds: true
+					},
+					dashStyle: "Dot",
+					lineWidth: 0
+				}
+			},
+
+
+Bring in Category name at point (see formatter..make sure u disable format)
+	plotOptions: {
+				spline: {
+					marker: {
+						enabled: true,
+						radius: 4,
+						lineColor: '#666666',
+						lineWidth: 1,
+						connectEnds: true
+					},
+					dashStyle: "Dot",
+					lineWidth: 0,
+					dataLabels: {
+						enabled: true,
+						align: 'top',
+						y: -15,
+						borderRadius: 5,
+						backgroundColor: 'rgba(252, 255, 197, 0.7)',
+						borderWidth: 1,
+						borderColor: '#AAA',
+						//format: '{y} days',
+						formatter: function() {
+							return this.x + '';
+						}
+					}
+
+
+Plotline on graph (see plotbands as well)
+	xAxis: {
+					categories: ['2015-07-23', '2015-07-24', '2015-07-25', '2015-07-26', '2015-07-27', '2015-07-28', '2015-07-29'],
+					labels: {
+						enabled: true,
+						rotation: -45
+					},
+					plotLines: [{
+						color: '#FF0000',
+						width: 2,
+						value: 5.5
+					}]
+				},
+
+
+
+Enabling Datalabels for a series object (may come handy if you dont require datalabels to be enabled on alternate series)
+	caseTypeObj = {
+                    name: 'Case Type',
+                    data: [],
+                    pointPadding: 0.3,
+                    pointPlacement: -0.2,
+                    dataLabels : {
+                        enabled : true,
+                        y : -15
+                        // x : 20
+                    }
+                },
+
+
+datalabels outside column 
+	datalabels { 
+		inside :  false,
+		y : -15
+
+
+
+Reverse X-axis values (reversed: true)
+ xAxis: {
+                    // tickInterval : 7 * 24 * 3600 * 1000,
+                    reversed: true,
+                    categories: [],
+                    labels: {
+                        rotation: -45,
+                        style: {
+                            fontFamily: 'ge-inspira',
+                            fontSize: '11px'
+                        }
+                    }
+                },
+
+
+
+Highcharts is not defined drilldown
+
+Solution is :
+	replaced highcharts-amd module
+	added drilldown dependency to highcharts-more in require-config.js

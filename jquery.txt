@@ -1,0 +1,56 @@
+check array exists
+	$.isArray(arrAbid)
+	$.isArray([])
+
+
+Object Exists
+	if (typeof maybeObject != "undefined") {
+ 		  alert("GOT THERE");
+	}
+
+check for a property exists
+	obj.hasOwnProperty('name')
+
+
+Iterate thru an object in jq
+	$.each(obj, function(property, value) {
+
+	}
+
+Deep copy of an object for passing as a function parameter
+	$.extend(true, {}, optionsObject)
+	
+	$.extend({}, optionsObject) would giv u a shallow copy
+
+
+Dynamically Creating Objects in a loop
+	var objects = {};
+	$.each(ConfigFaultObj, function(property, value){
+				if (typeof(value) != "undefined" && value != null && value.hasOwnProperty('configName') && value.hasOwnProperty('monthlyTrend')) {
+					configName = value.configName;
+					monthlyTrend = value.monthlyTrend;
+					objects[i] = { name : '', data : [] };
+					$.each(monthlyTrend, function(indx, val){
+						console.log(indx, val);
+						if (i ==0) {
+							optObj.xAxis.categories.push(val.month);
+						}
+						objects[i].name = configName;
+						objects[i].data.push(val.Average);						
+					});
+					optObj.series.push(objects[i]);
+					i++;				
+				}						
+			});
+
+
+Dynamic Objects Pointing
+	optObj.title.text = MDSC.msgs.faults[reqServType][reqLocoType][reqDataType].title;
+						optObj.subtitle.text = MDSC.msgs.faults[reqServType][reqLocoType][reqDataType].subtitle;
+
+
+
+Time taken to execute something in js
+	var initialTime = new Date().getTime()
+	var endTime = new Date().getTime();
+	var diff = parseInt ( endTime - initialTime)

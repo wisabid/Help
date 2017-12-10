@@ -1,0 +1,7 @@
+504: Dave didn't come back quickly enough
+
+This is embarrassing, you've asked for something and I've spent too long getting it. Maybe I got distracted by some pretty lights, but you'll never know.
+
+Do check status.jsbin.com, but do ping @js_bin if this problem keeps happening.
+
+If you want to add details please add it to the issues page and add any additional information you can to help diagnose this slackness.

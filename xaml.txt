@@ -1,0 +1,11 @@
+WPF using C#
+------------
+
+Alerting
+MessageBox.Show(mediaSrc, "Confirmation");
+
+
+Opening a new window
+	var newWindow = new camVideo();
+            newWindow.Show();
+where camVideo is the xaml filename

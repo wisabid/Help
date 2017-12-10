@@ -1,0 +1,9 @@
+to install active process bundle
+	Java -jar APInstall.jar
+
+to check the java version
+	cmd > 
+		java - version
+
+To access Active Process (eclipse)
+	go to C:\ActiveProcess and open ActiveProcess.bat

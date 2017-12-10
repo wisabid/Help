@@ -1,0 +1,314 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\307010541>cd C:\tmp
+
+C:\tmp>dir
+Volume in drive C is Windows7
+Volume Serial Number is 06D1-C654
+
+Directory of C:\tmp
+
+11/03/2014  12:20 PM    <DIR>          .
+11/03/2014  12:20 PM    <DIR>          ..
+08/22/2014  02:54 PM    <DIR>          analytics-codereview
+06/26/2014  07:22 PM            73,308 assetcases.js
+07/23/2014  05:11 PM    <DIR>          closerx
+07/23/2014  05:12 PM            18,422 closerx.zip
+07/21/2014  02:06 PM             3,222 f.txt
+06/17/2014  03:13 PM            81,408 FreeWareChkLst.xls
+10/20/2014  02:08 PM    <DIR>          lcv
+06/17/2014  03:15 PM            58,691 Python v2.7.7 license.html
+07/22/2014  11:46 AM        70,394,821 RMDWeb.war
+06/24/2014  07:33 PM            19,472 Speaker Series_Building Perceptions.docx
+09/16/2014  12:27 PM                44 test.cmd
+07/25/2014  05:48 PM    <DIR>          to
+07/02/2014  05:30 PM             8,204 to-popup.js.txt
+10/15/2014  01:35 PM            60,989 viz.js
+10/15/2014  12:58 PM            19,875 viz.jsp
+              11 File(s)     70,738,456 bytes
+               6 Dir(s)  146,562,191,360 bytes free
+
+C:\tmp>git init lc
+Initialized empty Git repository in C:/tmp/lc/.git/
+
+C:\tmp>dir
+Volume in drive C is Windows7
+Volume Serial Number is 06D1-C654
+
+Directory of C:\tmp
+
+11/03/2014  12:28 PM    <DIR>          .
+11/03/2014  12:28 PM    <DIR>          ..
+08/22/2014  02:54 PM    <DIR>          analytics-codereview
+06/26/2014  07:22 PM            73,308 assetcases.js
+07/23/2014  05:11 PM    <DIR>          closerx
+07/23/2014  05:12 PM            18,422 closerx.zip
+07/21/2014  02:06 PM             3,222 f.txt
+06/17/2014  03:13 PM            81,408 FreeWareChkLst.xls
+11/03/2014  12:28 PM    <DIR>          lc
+10/20/2014  02:08 PM    <DIR>          lcv
+06/17/2014  03:15 PM            58,691 Python v2.7.7 license.html
+07/22/2014  11:46 AM        70,394,821 RMDWeb.war
+06/24/2014  07:33 PM            19,472 Speaker Series_Building Perceptions.docx
+09/16/2014  12:27 PM                44 test.cmd
+07/25/2014  05:48 PM    <DIR>          to
+07/02/2014  05:30 PM             8,204 to-popup.js.txt
+10/15/2014  01:35 PM            60,989 viz.js
+10/15/2014  12:58 PM            19,875 viz.jsp
+              11 File(s)     70,738,456 bytes
+               7 Dir(s)  146,562,101,248 bytes free
+
+C:\tmp>lc
+'lc' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tmp>cd lc
+
+C:\tmp\lc>dir
+Volume in drive C is Windows7
+Volume Serial Number is 06D1-C654
+
+Directory of C:\tmp\lc
+
+11/03/2014  12:28 PM    <DIR>          .
+11/03/2014  12:28 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  146,562,125,824 bytes free
+
+C:\tmp\lc>notepad a.txt
+
+C:\tmp\lc>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tmp\lc>git add a.txt
+
+C:\tmp\lc>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   a.txt
+
+
+C:\tmp\lc>git commit -m "Initial commit"
+[master (root-commit) 6a0ec9d] Initial commit
+1 file changed, 1 insertion(+)
+create mode 100644 a.txt
+
+C:\tmp\lc>git status
+On branch master
+nothing to commit, working directory clean
+
+C:\tmp\lc>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tmp\lc>git add a.txt
+
+C:\tmp\lc>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   a.txt
+
+
+C:\tmp\lc>git commit -m "Initial commit 2"
+[master e08a2a3] Initial commit 2
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\tmp\lc>git status
+On branch master
+nothing to commit, working directory clean
+
+C:\tmp\lc>git remote -v
+
+C:\tmp\lc>git remote add http:/openge.ge.com/askkdkj
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+C:\tmp\lc>git remote add dummy http:/openge.ge.com/askkdkj
+
+C:\tmp\lc>git remote -v
+dummy   http:/openge.ge.com/askkdkj (fetch)
+dummy   http:/openge.ge.com/askkdkj (push)
+
+C:\tmp\lc>git branch
+* master
+
+C:\tmp\lc>git checkout test
+error: pathspec 'test' did not match any file(s) known to git.
+
+C:\tmp\lc>git branch --help
+Launching default browser to display HTML ...
+
+C:\tmp\lc>git branch test
+
+C:\tmp\lc>git branch
+* master
+  test
+
+C:\tmp\lc>git checkout test
+Switched to branch 'test'
+
+C:\tmp\lc>git branch
+  master
+* test
+
+C:\tmp\lc>git status
+On branch test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tmp\lc>git add a.txt
+warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+
+C:\tmp\lc>git status
+warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+On branch test
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   a.txt
+
+
+C:\tmp\lc>git commit -m "commit in test"
+[test warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+02aa844] commit in test
+warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\tmp\lc>git status
+On branch test
+nothing to commit, working directory clean
+
+C:\tmp\lc>git branch
+  master
+* test
+
+C:\tmp\lc>git checkout master
+Switched to branch 'master'
+
+C:\tmp\lc>git branch
+* master
+  test
+
+C:\tmp\lc>git status
+On branch master
+nothing to commit, working directory clean
+
+C:\tmp\lc>git branch abid-working
+
+C:\tmp\lc>git branch
+  abid-working
+* master
+  test
+
+C:\tmp\lc>git checkout abid-working
+Switched to branch 'abid-working'
+
+C:\tmp\lc>git checkout test
+Switched to branch 'test'
+
+C:\tmp\lc>git checkout abid-working
+Switched to branch 'abid-working'
+
+C:\tmp\lc>git add a.txt
+warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+
+C:\tmp\lc>git commit -m "abid's change"
+[abid-working warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+27a7a92] abid's change
+warning: LF will be replaced by CRLF in a.txt.
+The file will have its original line endings in your working directory.
+1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\tmp\lc>git status
+On branch abid-working
+nothing to commit, working directory clean
+
+C:\tmp\lc>git branch
+* abid-working
+  master
+  test
+
+C:\tmp\lc>git push origin abid-working
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\307010541>cd C:\tmp\lcv
+
+C:\tmp\lcv>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tmp\lcv>dir
+Volume in drive C is Windows7
+Volume Serial Number is 06D1-C654
+
+Directory of C:\tmp\lcv
+
+10/20/2014  02:08 PM    <DIR>          .
+10/20/2014  02:08 PM    <DIR>          ..
+10/20/2014  02:05 PM                26 README.txt
+10/20/2014  02:07 PM    <DIR>          somecode
+10/20/2014  02:08 PM    <DIR>          workingcopy
+               1 File(s)             26 bytes
+               4 Dir(s)  146,560,962,560 bytes free
+
+C:\tmp\lcv>git remote -v
+origin  ssh://vinayraikar@openge.ge.com/gitroot/locovision (fetch)
+origin  ssh://vinayraikar@openge.ge.com/gitroot/locovision (push)
+
+C:\tmp\lcv>git branch
+* master
+
+C:\tmp\lcv>

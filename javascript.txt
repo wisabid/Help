@@ -1,0 +1,828 @@
+Date Object - check for invalid date
+	dt = "1982-10-15 01:10:20.546";
+	dtime = new Date(dt);
+	if (dtime.toString() == "Invalid Date") {
+	        			throw "Invalid Date";
+	        		}
+	        		else {
+
+
+
+Date Format which supports all browsers
+	var d = new Date(2011, 01, 07); // yyyy, mm-1, dd  
+var d = new Date(2011, 01, 07, 11, 05, 00); // yyyy, mm-1, dd, hh, mm, ss  
+var d = new Date("02/07/2011"); // "mm/dd/yyyy"  
+var d = new Date("02/07/2011 11:05:00"); // "mm/dd/yyyy hh:mm:ss"  
+var d = new Date(1297076700000); // milliseconds  
+var d = new Date("Mon Feb 07 2011 11:05:00 GMT"); // ""Day Mon dd yyyy hh:mm:ss GMT/UTC 
+
+
+
+replaces all space and hiphens from date
+	var response = string.replace(/-/g,"/");
+  //The slash-g bit says: do this more than once
+
+
+"use strict"; to be used on top of every module
+
+
+JAVASCRIPT MVC
+var M = {}, V = {}, C = {};
+
+M.data = "hello world";
+
+V.render = function (M) { alert(M.data); }
+
+C.handleOnload = function () { V.render(M); }
+
+window.onload = C.handleOnLoad;
+Controller (C) listens on some kind of interaction/event stream. In this case it's the page's loading event.
+
+Model (M) is an abstraction of a data source.
+
+View (V) knows how to render data from the Model.
+
+The Controller tells to View to do something with something from the Model.
+
+In this example
+
+the View knows nothing about the Model apart from it implements some interface
+the Model knows nothing of the View and the Controller
+the Controller knows about both the Model and the View and tells the View to go do something with the data from the Model.
+
+
+
+
+Clearing an input file field in IE 8
+	<div id="uploadFile_div">
+<input type="file" class="fieldMoz" id="uploadFile" 
+            onkeydown="return false;" size="40" name="uploadFile"/>
+</div>
+<a onclick="clearFileInputField('uploadFile_div')" 
+                         href="javascript:noAction();">Clear</a>
+Java Script function below looks strange but acts exactly in the way we want:
+ 
+<script>
+function clearFileInputField(tagId) {
+    document.getElementById(tagId).innerHTML = 
+                    document.getElementById(tagId).innerHTML;
+}
+</script>
+
+
+
+chrome compatible
+	var is_chrome = !!window.chrome;
+if (is_chrome) {
+
+	//chrome code
+}
+
+
+
+To suppress all javascript errors
+	<script type="text/javascript">
+    window.onerror = function(message, url, lineNumber) { 
+        // code to execute on an error  
+        return true; // prevents browser error messages  
+    };
+</script> 
+
+
+
+window.open
+	window.open("listing.jsp,"Road Number","minimize=no;maximize=no;border=thin;toolbar=no,scrollbars=yes,width=420,height=380,top=225,left=300,resizable=no");
+
+
+Accessing parent window element from child window
+	window.opener.loadrnValue(rn);
+
+
+
+Accessing an element within a frame of another frame
+	window.frames.content_frame.frames.casedetails_frame.tblForChrom1.addEventListener('mouseover', abid);
+
+
+
+event.srcElement should be replaced with event.target in latest browsers like chrome
+
+attachEvent should be replaced with addEventListener in latest browsers like chrome
+
+BUbbling in IE and capturing in new browsers
+
+useCapture field is ther in addEventListener method. true wil set capturing and false wil set bubbling.
+
+
+copy to clipboard
+	in chrome
+		copy(doc.textContent);
+
+
+Random Number with in a range
+	randomNum = Math.floor(Math.random() * (MaxLimit - MinLimit + 1)) + MinLimit;	
+
+
+Refresh iframe url 
+------------------
+function abc(){
+                setTimeout(function(){
+                                //In Plain JS
+                                document.getElementById('iframeid').src = document.getElementById('iframeid').src;
+
+                                //if Jquery, use the following line and ignore the last line
+                                $('#your_iframe').attr('src', $('#your_iframe').attr('src'));
+                                
+                                //recursive calling of this function
+                                abc();
+                                }, 1200000);
+}
+//calling function for the 1st time
+abc();
+
+
+check for a value in an array
+	if ($.inArray(val.xCoordinate, optObj.xAxis.categories) == -1) indicates the value doesnt exist in the array
+
+
+
+Suppressing all alerts and redirecting it to console.
+
+	window.alert = (function() {
+			var nativeAlert = window.alert;
+			return function(message) {
+				window.alert = nativeAlert;
+				message.indexOf("DataTables warning") === 0 ?
+					console.warn(message) :
+					nativeAlert(message);
+			}
+		})();
+
+
+
+Number validation in textbox
+	$('.msgcountUpdate .input-mini', '.container').keypress(function (e) {
+       //if the letter is not digit then display error and don't type anything
+       if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+          //display error message
+          $('.msgcountUpdate .control-label', '.container').html("Digits Only").show().fadeOut("slow");
+                 return false;
+          }
+   });
+	
+
+clear text boxes on hide of modal 
+	$('#forgotPassModal').on('hidden', function () {
+    $('input').val('');
+});
+
+
+To break a $.each loop, you have to return false in the loop callback. Returning true skips to the next iteration, equivalent to a continue in a normal loop. According to the documentation return false should do the job. We can break the $.each() loop [..] by making the callback function return false.
+
+
+Yesterday's date
+	nowDt = new Date(nowDt - 24 * 60 * 60 * 1000);
+
+
+
+OwnerDocument
+	currentCWindow = $container.get(0).ownerDocument.defaultView;
+
+currentCWindow.$( $container.find('.input-append.date') ).datetimepicker('enable');
+
+
+
+Disable selection of text 
+onselectstart = new funciont....
+
+
+Unbind all events of datatable rows for avoiding memory leakage
+unbind all jz before functionclearTable method call
+
+
+
+Ownerdocument and defaultview
+var $el = $('.popout-pane[data-tabid='+paneData.tabId+'] .secondary-pane[data-module='+paneData.paneType+']', doc);
+		$el.get(0).ownerDocument.defaultView.$($el).find('.input-append.date').datetimepicker('destroy');
+
+
+		currentCWindow = $container.get(0).ownerDocument.defaultView;
+
+
+		currentCWindow.$( $container.find('.input-append.date') ).datetimepicker('enable');
+
+
+Sort Array
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+
+A memory leak is the gradual loss of available computer memory when a program (an application or part of the operating system) repeatedly fails to return memory that it has obtained for temporary use.
+
+
+undefined check
+	if(typeof val === 'undefined') to avoid an exception in case val didn't exist.
+
+
+Events bound
+el = $('[data-target=".navbar-search"]').get(0);
+$._data(el);
+
+
+
+Events Bound
+	$._data(window, 'events' )	will get the list of events in a window.
+
+
+offset
+	
+$($0).offset()
+
+
+
+BUtton reset problem
+	$mainmodal.find('.btn-primary').button('reset');
+
+// Disabling submit button
+				setTimeout(function(){$mainmodal.find('.btn-submit').addClass('disabled');}, 0);
+
+
+Cache Busting in Require JS
+Ref - http://stackoverflow.com/questions/8315088/prevent-requirejs-from-caching-required-scripts
+
+	RequireJS can be configured to append a value to each of the script urls for cache busting.
+
+From the RequireJS documentation (http://requirejs.org/docs/api.html#config):
+
+urlArgs: Extra query string arguments appended to URLs that RequireJS uses to fetch resources. Most useful to cache bust when the browser or server is not configured correctly.
+Example, appending "v2" to all scripts:
+
+require.config({
+    urlArgs: "bust=v2"
+});
+For development purposes, you can force RequireJS to bypass the cache by appending a timestamp:
+
+require.config({
+    urlArgs: "bust=" + (new Date()).getTime()
+});
+
+http://blog.johnnyreilly.com/2014/03/caching-and-cache-busting-with-requirejs.html
+
+
+$._data( $('.element')[0], 'events' );	 This will display all the events that are currently assigned to the element.
+
+
+
+parseInt($('#abid').css("width")) to strip off px from the result
+
+
+IE 11 COmpatibility Detection
+	if (navigator.userAgent.indexOf("Trident/7.0") > -1 && navigator.userAgent.indexOf("MSIE 7.0") > -1) { alert('On IE 11 COmpatibility Mode'); }
+
+
+Mulitple Scroll Event firings...how to restrict?
+var scrollTimer = null;
+$("#target").scroll(function(){
+    if (scrollTimer) {
+        clearTimeout(scrollTimer);  // clear previous timer
+    }
+    // set timer while we wait for a pause in scroll events
+    scrollTimer = setTimeout(function() {
+        scrollTimer = null;  // timer done here
+        // do your dynamic loading here
+    }, 1000);
+});
+REf : http://htmlasks.com/onscroll_event_called_multiple_times
+
+
+Get DOM element from jquery
+
+	var $scrolltarget = datatable.$table.parents('div.fht-tbody.quicknav');
+	$scrolltarget.get(0);
+
+
+Detect Scroll direction
+$(function () {
+
+    // show hide subnav depending on scroll direction
+    var position = $(window).scrollTop();
+
+    $(window).scroll(function () {
+    
+        var scroll = $(window).scrollTop();
+
+        if (scroll > position) {
+
+           
+
+
+            // scrolling downwards, only here for dev purposes
+            console.log('moving DOWN the page');
+           
+
+        } else {
+            
+            // scrolling upwards 
+            console.log('moving UP the page');
+            
+        }
+
+        position = scroll;
+    });
+
+});
+
+Get scrollbar top position
+var $scrolltarget = datatable.$table.parents('div.fht-tbody.quicknav'),
+            initialPosition = $scrolltarget.scrollTop();
+
+
+Height visible in viewport
+$(this).innerHeight()
+
+
+Scrollable height
+this.scrollHeight
+
+Move scrollbar up
+$scrolltarget.scrollTop(160);
+
+
+Find a specific row in table
+var row = $('#tableid').find('tr').eq( line );
+
+
+Position of row from window
+row.offset().top
+
+
+Add data attributed to tr
+$('tr').attr('data-abid', 'abid');
+
+and NOT $('tr').data('abid', 'abid');
+
+
+using multiple not selector
+fh.$table.find('tbody tr:not(#rec_top, #rec_bottom)').each(function(i) {
+          $("<tr></tr>").appendTo(fh.$fixedColumnBody).append($(this).find('td:lt(' + fc + ')').clone().append('<div class="fht-cell"></div>'));
+        });
+
+
+Alert json object
+	alert(JSON.stringify(jsonObject));
+
+
+Datatable alignment issues
+	swidth is not working when sScrolly is set
+	bAutoWidth need to be false while setting swidth in %
+	table-layout:fixed;width:100%; should be there for not spreading the table content beyond the outer container
+
+
+Bootstrap multiselect Ref
+	http://davidstutz.github.io/bootstrap-multiselect/#configuration-options-enableHTML
+
+
+
+Select texts within a label containing input elements and texts
+	$('.feedbackImg').contents().first()[0].textContent = 'Change Your Image';
+	OR
+	$('.feedbackImg').contents().eq(1).remove();
+	You need to update the textNode
+
+contents() - for getting all nodes including text and comments
+eq() - get first element , which is textNode(label)
+replaceWith() - update the text content with new text
+Ref : http://stackoverflow.com/questions/33520137/how-to-change-text-inside-a-label-tag-using-jquery
+
+$("#listItem").contents().get(0).nodeValue
+
+
+Math.ceil
+Round a number upward to it's nearest integer:
+
+Math.ceil(1.4)
+
+
+find element inside iframe
+	$mainContainer.find('iframe:not(.hidden)').contents().find('#abid')
+
+
+Date FOrmating
+	var d = new Date();
+var curr_date = d.getDate();
+var curr_month = d.getMonth(); //always add 1 to month 
+var curr_year = d.getFullYear();
+
+
+
+var myDate="26-02-2012";
+myDate=myDate.split("-");
+var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2];
+alert(new Date(newDate).getTime());
+
+var myDate="26-02-2012"; myDate=myDate.split("-"); var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2]; alert(new Date(newDate).getMonth()+1);
+var myDate="26-02-2012"; myDate=myDate.split("-"); var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2]; alert(new Date(newDate).getDate());
+var myDate="26-02-2012"; myDate=myDate.split("-"); var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2]; alert(new Date(newDate).getFullYear());
+
+
+
+Backbone (Refreshing the opened pane)
+$utilities.on('click', 'a[data-action="rmd.refresh"]', function(){
+        App.Routers.rxAuthRouter.initalize()
+    });
+
+Select the 1st column values of all rows
+	$('tr td:nth-child(1)') 
+		and NOT $('tr td:first') or $('tr td:eq(0)')
+
+
+Triggering a click on parent window button from child window
+	window.opener.$('.stickypane:visible a[data-action="rmd.refresh"]').trigger('click');
+
+
+Visibility:hidden would consume space in dom and display:none wont. But display:none would not get events associated worked. So
+	for visibility:hidden, give position absolute. This will get rid of the space
+
+technique for multiselect overflow with overflow:hidden for modal-body
+	Wrap modal-body div with another div and assign overflow:visible and position relative to that.
+	Now give position absolute for the div holding multiselect. done!
+
+
+Refreshing an iframe
+	$(window.frameElement).attr('src', $(window.frameElement).attr('src')); //recommended
+		OR
+	$(window.frameElement).get(0).contentWindow.location.reload(true);
+
+
+Autoclose of datetimepicker 
+$form.find('.input-append.date').datetimepicker().on('changeDate', function(ev){ 
+	debugger;                
+    $(this).datetimepicker('hide');
+});
+
+
+escape special characters before regex
+Try this replaceAll: http://dumpsite.com/forum/index.php?topic=4.msg8#msg8
+
+String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+} 
+It is very fast, and it will work for ALL these conditions that many others fail on:
+
+"x".replaceAll("x", "xyz");
+// xyz
+
+"x".replaceAll("", "xyz");
+// xyzxxyz
+
+"aA".replaceAll("a", "b", true);
+// bb
+
+"Hello???".replaceAll("?", "!");
+// Hello!!!
+Let me know if you can break it, or you have something better, but make sure it can pass these 4 tests.
+
+Ref: http://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string
+
+
+
+Disable click 
+	pointer-events:none
+
+
+Jquery select all elements except first and last
+	.not(':first').not(':last')
+eg : 
+$('#abid').find('tr').not(':first').not(':last')
+
+
+
+
+Closure skeleton
+for (var i=0; i<people.length; i++) {
+        (function(i) {
+            setTimeout(function() {             
+                ShowIt(people[i].name) 
+            }, 1000);
+        })(i);
+}
+
+
+Colspan in datatable
+
+ "fnHeaderCallback": function( nHead, aData, iStart, iEnd, aiDisplay ) {
+	$(nHead).find('th').eq(0).attr('colspan', '2');
+	$(nHead).find('th').eq(1).remove();
+    }
+
+$table.iidsBasicDataGrid({
+	"bInfo":false,
+	"bPaginate": false, 
+	useFloater: false,
+	"sDom": "Trt<'table-controls'<'pull-left'l><'pull-right'ip>>",
+	"aaSorting": [],
+	"fnHeaderCallback": function( nHead, aData, iStart, iEnd, aiDisplay ) {
+	$(nHead).find('th').eq(0).attr('colspan', '2');
+	$(nHead).find('th').eq(1).remove();
+    } }).dataTable();
+
+
+Simple blink of a text
+<script type="text/javascript">
+function blink() {
+    $('#blinkeffect').fadeOut(500).fadeIn(500);
+}
+setInterval(blink, 1000); 
+</script>
+
+
+
+Mulitple css in jquery
+	$("p").css({"background-color": "yellow", "font-size": "200%"});
+
+To check if an element is hidden or displayed on screen
+	if($('#yourID:visible').length == 0)
+	{
+
+	}
+
+
+Bing Map using Lat Lon respectively (Aerial view)
+	https://www.bing.com/mapspreview?ss=31:11:55.3,-82:22:6.5&style=a
+	
+	Display Labels (use &style=h)
+		https://alastaira.wordpress.com/2011/05/13/displaying-labels-on-top-of-bing-maps-custom-tile-layers/
+
+
+Check for an alphabet in a string
+	if (elVal.match(/[a-z]/i).length > 0){
+
+Check if a character occurs in a string
+	if (elVal.indexOf('-') != -1 )
+
+
+Unbind events defined using on method (off)
+	$("body").on("click", "p", changeSize);
+    $("body").on("click", "p", changeSpacing);
+    $("button").click(function(){
+        $("body").off("click", "p");
+    });
+
+
+Apply style to the 1st td of every table
+	td:first-child { text-align: left; }
+
+Apply style to the last td of every table
+	td:last-child { text-align: left; }
+
+
+table row move up and down
+	$(document).ready(function(){
+    $(".up,.down,.top,.bottom").click(function(){
+        var row = $(this).parents("tr:first");
+        if ($(this).is(".up")) {
+            row.insertBefore(row.prev());
+        } else if ($(this).is(".down")) {
+            row.insertAfter(row.next());
+        } else if ($(this).is(".top")) {
+            row.insertBefore($("table tr:first"));
+        }else {
+            row.insertAfter($("table tr:last"));
+        }
+    });
+});
+
+
+
+Set center on map
+	options.map.setCenter({lat:62.129224, lng:-80.085059})
+
+
+
+Trigger enter key press
+	if ($eventTarget.val().indexOf('-') == -1) {
+							var e = $.Event("keypress");
+							e.which = 13; // # Some key code value
+							$eventTarget.trigger(e);
+						}
+
+
+
+Compare exact string using Regex
+	use ^ and $ to match the start and end of your string
+
+^[0-9]{6}$
+^[0-9]{6}\.[0-9]{3}$
+Reference: http://www.regular-expressions.info/anchors.html
+
+
+
+Bootstrap class for text-align : text-right
+	<div class="control-group span3 text-right" style="padding-top:5px;">
+					<span class="data-label">Fault Origin : </span>
+					ABID SHAMIM
+				</div>	
+
+Show more ... using deafault if the text overflows
+	#caseActions .multiselect-container li label.radio span {
+		text-overflow:ellipsis;	
+	}
+
+
+Restrict modal from closing on click of backdrop
+	$.fn.modal.defaults.backdrop = 'static';
+
+	THE concept is :
+	(
+	$('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false  // to prevent closing with Esc button (if you want this too)
+})
+	)
+
+
+Intro JS
+Ref: https://github.com/usablica/intro.js/issues/413
+	function show_intro() {
+		if (localStorage.getItem('intro_shown')) {
+			// already shown
+			return
+		}
+		localStorage.setItem('intro_shown', true)
+		// intro = introJs()
+		// intro.setOptions([...])
+		intro().setOption('showProgress', true).start(); //for guider demo
+		// localStorage.removeItem("intro_shown"); //to remove localstorage
+		/*
+	// add a flag when we're done
+	introJs().oncomplete(function() {
+  	localStorage.setItem('doneTour', 'yeah!');
+	})
+
+	// add a flag when we exit
+	introJs().onexit(function() {
+	   localStorage.setItem('doneTour', 'yeah!');
+	});
+
+	// and check for it when deciding whether to start. 
+	window.addEventListener('load', function() {
+	  var doneTour = localStorage.getItem('doneTour') === 'yeah!';
+ 	 if (doneTour) return;
+ 	 introJS().start();
+	}
+	*/
+	}
+	show_intro();
+
+
+
+localStorage
+	localStorage.getItem('intro_shown')
+	localStorage.setItem('intro_shown', true)
+	localStorage.removeItem("intro_shown"); //to remove localstorage
+
+
+Passing params on click event
+	$( "p" ).on( "click", { foo: "bar" }, myHandler );
+
+	and access the param using the below technique in event handler method
+		arguments[0].data.referrer
+
+
+
+Check if a string contains alphabets
+	if (/[a-zA-Z]/.test("C5000")) {
+				alert('The string contains an alphabet');
+		    		return false;
+		    	} 
+	
+	Check how many occurences of alphabets
+		if ((that.query.length > 1 && that.query.match(/[a-zA-Z]/g).length > 1)) {
+				alert('COntains '+that.query.match(/[a-zA-Z]/g).length+' occurences of alphabets');
+		    		return false;
+		    	}
+
+
+Restrict all characters other than numbers and aphabets
+	// Restricting the input to only letters and numbers
+			var regex = new RegExp("^[a-zA-Z0-9-]+$"),
+		    	str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+		    if (regex.test(str)) {
+				alert('Contains no special characters');
+			}
+			else {
+				alert('Contains a character which is not specified in teh regex');
+
+
+
+Arguments in method
+	referrer = arguments[0].data.referrer?arguments[0].data.referrer:'';
+
+
+Self invoking functions
+	(function () {
+    		//body
+	}());
+
+	OR 
+
+	(function () {
+    		//body
+	})();
+
+	Ref : http://blog.mgechev.com/2012/08/29/self-invoking-functions-in-javascript-or-immediately-invoked-function-expression/
+
+
+
+Finding elements with a value containing 
+	$( "input[name*='man']" ).val( "has man in it!" );
+	$($0).find('li a[data-resourceid*="LOCOVISION"]')
+	
+			}
+
+
+To Display time string
+	new Date().toLocaleTimeString()
+
+
+Vinay pinged : Slideshow
+	Raikar, Vinay (GE Transportation)  
+
+btw, have you tried https://github.com/hakimel/reveal.js ? 
+
+
+
+jqxgrid tooltip (tooltip displaying dynamic data)
+	http://www.jqwidgets.com/community/topic/tool-tip-for-column/
+
+jqxgrid status bar
+	showstatusbar: statusbarFlag,
+			    renderstatusbar: function (statusbar) {
+			        // var rowCount = $('.datascreen-grid', $container).jqxGrid('getrows').length;
+			        statusbar.empty().html('<div style="margin-right: 7px; float: right; margin-left: 0px;padding-top:10px;">Showing <span id="recordsTotalCont">...</span> records</div>');
+			        // rowCount = null;
+			    }
+
+	eg : $(wrapId).jqxGrid({
+				width: '100%',
+				height: '435',
+				pagermode: "simple",
+				enabletooltips: true,
+				enableellipsis: false,
+				columnsresize: false,
+				filterable: true,
+				autoshowcolumnsmenubutton: false,
+				showstatusbar: statusbarFlag,
+			    renderstatusbar: function (statusbar) {
+			        // var rowCount = $('.datascreen-grid', $container).jqxGrid('getrows').length;
+			        statusbar.empty().html('<div style="margin-right: 7px; float: right; margin-left: 0px;padding-top:10px;">Showing <span id="recordsTotalCont">...</span> records</div>');
+			        // rowCount = null;
+			    }
+			});
+
+
+jqxgrid scroll programmatically
+	var $dsGrid = $(".datascreen-grid", $container),
+		hScroll = $dsGrid.jqxGrid("hScrollBar");
+	$dsGrid.jqxGrid("scrollleft", hScroll.jqxScrollBar("setPosition", pos));
+Ref: http://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxscrollbar/jquery-scrollbar-getting-started.htm?search=			
+
+jqxgrid max of scrollbar
+	$("#jqxgrid").jqxGrid('scrollleft', hScroll.jqxScrollBar('max'));
+
+
+jqxgrid mouse scrolling
+	http://www.jqwidgets.com/community/topic/horizontal-scrollbar-issue-in-grid/
+
+
+span alignment issue (even after giving padding)
+	display:inline-table;position:relative:top-10px;
+
+
+hasOwnProperty()
+	var obj = {dt : 'dfdfg', ab : 'dfgdfg'};
+	obj.hasOwnProperty('dt');//returns true
+
+
+
+Time comparison
+	var startTime = new Date('2012/10/09 12:00'); 
+	var endTime = new Date('2013/10/09 12:00');
+	var difference = endTime.getTime() - startTime.getTime(); // This will give difference in milliseconds
+	var resultInMinutes = Math.round(difference / 60000); //in minutes
+
+
+Access parent window object (window.opener)
+	window.opener.RMD.pageObj.pages
+
+
+Checking whethr a pop out window is open or not
+	var popup = window.open(...
+
+	if (popup && !popup.closed) {
+       popup.focus(); 
+	} 
+
+
+Triggering click on parent window
+	window.opener.$('.abc').trigger('click') 

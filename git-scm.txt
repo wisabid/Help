@@ -1,0 +1,34 @@
+1st Step - CLoning a Repo
+
+	Go to https://openge.ge.com/gf/project/locovision/scmgit/?action=AccessInfo
+and get the ssh url
+
+Open Git Gui > Clone a Repo > Give the ssh url and location
+Give open ge password
+
+go to the code base n verify if its checked out
+
+now go to Git Gui > Edit > Options > Under Global Repo, giv a name under username (to show in logs) and ge email > Save!!
+
+Committing a file
+	Add a folder and a text file in C:\gbid\Work\Locovision\LocovisionGITscm\workingcopy in the code base using file explorer
+
+go to GIT GUI > Recscan > Click on the file at the starting portion to bring it to the Staged Changes > Add a commit msg > Commit
+And finally Push > Make sure the settings are showing master and origin >Push !!!! Done!!!!
+
+
+
+Credentials Stored in GIT GUI
+-----------------------------
+ssh://abid.shamimpm@openge.ge.com/gitroot/locovision
+
+
+
+abid.shamimpm@ge.com
+
+Abid
+
+
+
+
+

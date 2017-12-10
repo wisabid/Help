@@ -1,0 +1,88 @@
+ng-src for img & ng-href delays the rendering of html with anmgular xpressions
+
+custom filters
+
+	including filter lib in filters.js
+
+
+filters r recommended to use in view
+
+filters always return a function n not an object
+
+ang seed is jz for scaffolding
+
+jsformat - sublime plugin
+
+tag - sublime plugin
+
+
+do not communicate between controllers
+
+
+routes to accept param eter
+
+ng-form is used for ang validation
+
+angular copy
+
+underscore lib - 2 deal with large num of objects
+
+
+$locationChangeSuccess - being used for toggling navbar
+
+
+ngSanitize n ng-bind-html - for running html say in a rich text editor
+
+scope isolation for directives
+
+
+$on events
+broadcast and emit events
+
+broadcast - to child elements
+
+emit - to the root
+
+
+Shared Services & Events, Rootscope
+
+A single view can have multiple controllers
+a controller is a discreet piece of functionality
+
+
+
+Custom Directives
+
+Instructors plunker
+	
+
+angular wrapper around setTimeout - $timeout
+
+
+dash-delimited shud b the case in html when u map from angular to html
+
+Binding &  Structuring using directives are the biggest advantages of Angular
+
+link function of custom directives
+
+ng-include - for including html files
+
+gotta learn lot of nw things..coz mvc new to me..4 me a lil too much for me...
+coz b4 i cud get a hang of some new concepts in ang, v wud jz mov start learnin a new one..
+jz that i wish v had more time...but wateva i learnt from here, its def goin to benefit in my careen in d  long run.
+
+
+karma and protractor
+	karma internally used jasmine unit testing framework...
+
+
+$watch - watching a model
+
+parse - online PHP SDK - online DB
+
+pluing for auto filling text boxes
+
+
+firebase - online DB
+
+

@@ -1,0 +1,152 @@
+Install Ionic
+
+	Pre requisite:
+	--------------
+		As On April 3, 2016, use the following commands for settings npm proxies
+	C:\Users\212340778>npm config set proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+
+	C:\Users\212340778>npm config set https-proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+Ref : http://jjasonclark.com/how-to-setup-node-behind-web-proxy/
+
+Done!!
+
+	Download the latest node js from nodejs.org (choose 1st option [LTS recommended for most users])
+	Verify > node -v
+	Update npm using > npm install -g npm
+	then > npm install -g cordova
+	verify > cordova -v
+	then Run CMD as Administrator and
+	> npm install -g ionic
+	Verify using > ionic -v or just > ionic
+
+
+If there is any error while executing ionic start myApp tabs :
+Ref : http://jasonwatmore.com/post/2014/04/02/ionic-framework-getting-ionic-start-appname-working-behind-a-proxy
+----------------------------------------------------------------------------------------------------------------
+	1. Add the proxy url to request.js located at 'C:\Users\[username]\AppData\Roaming\npm\node_modules\ionic\node_modules\request\request.js'. Here's the update including the lines just before and after so you can find where to put it.
+
+	if (self.strictSSL === false) {
+  self.rejectUnauthorized = false
+}
+ 
+// hack to add proxy
+self.proxy = 'http://10.68.0.5:8080';
+ 
+if (self.proxy) {
+  if (typeof self.proxy == 'string') self.proxy = url.parse(self.proxy)
+ 
+  // do the HTTP CONNECT dance using koichik/node-tunnel
+  if (http.globalAgent && self.uri.protocol === "https:") {
+    var tunnelFn = self.proxy.protocol === "http:"
+                 ? tunnel.httpsOverHttp : tunnel.httpsOverHttps
+ 
+    var tunnelOptions = { proxy: { host: self.proxy.hostname
+                                 , port: +self.proxy.port
+                                 , proxyAuth: self.proxy.auth
+                                 , headers: { Host: self.uri.hostname + ':' +
+                                      (self.uri.port || self.uri.protocol === 'https:' ? 443 : 80) }}
+                        , rejectUnauthorized: self.rejectUnauthorized
+                        , ca: this.ca }
+ 
+    self.agent = tunnelFn(tunnelOptions)
+    self.tunnel = true
+  }
+}
+
+
+
+
+
+Cordova CLI: 6.3.1
+Gulp version:  CLI version 3.9.1
+Gulp local:   Local version 3.9.1
+Ionic Framework Version: 1.3.1
+Ionic CLI Version: 2.1.0
+Ionic App Lib Version: 2.1.0-beta.1
+OS: Windows 7 SP1
+Node Version: v4.6.0
+
+
+Display Platforms
+	cordova platform ls
+
+cordova requirements
+
+
+While running on Windows, if you chose the wrong address for ionic serve
+	> ionic address
+
+
+To install windows platform
+	> ionic build windows
+
+
+ionic install -g gulp
+
+
+Staging folder in Xcode :
+	The contents of "Staging" folder actually goes into execution on your device.
+
+myAwesomeProject/www ---copy---> Staging/www
+Cordova's build command copies contents from your "myAwesomeProject/www" folder to the "Staging/www" folder. The commands are:
+
+sudo cordova build ios  //ios build
+sudo cordova build android //android build
+Caution! Remember that the build command not only copies the contents to the "Staging" folder but also build the whole app including native ios/android code. So, it will take long. For minor changes I usually copy the changed files to the "Staging" folder manually and build and run the app using XCODE incase of iOS.
+
+The "staging" folder contains those www assets that are distributed into an iOS app bundle. The staging folder is completely overwritten with files from the folders my_cordova_project/www/ (common www code for all platforms) and my_cordova_project/merges/ios/ (specific www code for Xcode project). The contents in these two are to be edited. The contents of my_cordova_project/www/ remain the same over all platforms, which is organized by the cordova build command. As of Cordova 3.3, it seems the Xcode build for ... command is not sufficient for the whole process, you also need to invoke the cordova build command in order to synchronze all folders properly.
+
+
+Long answer:
+
+The folder:
+  my_cordova_project/platforms/ios/www/
+is "mapped" in Xcode to
+  /my_xcode_project/staging/www/
+
+You can check this by altering a file name temporarily with Finder and observe the tree in Xcode.
+
+The folder:
+  my_cordova_project/www/
+is "mapped" in Xcode to
+  /my_xcode_project/www/
+Then consider Cordova's merges concept that allows to distribute specific www documents for specific platforms (see here). This happens by putting them into the folder my_cordova_project/merges/ and using the command line cordova build command. It seems that cordova build is not only meant to create the app the first time. If you start a build and observe the trees in Xcode, you will see that the /my_xcode_project/staging/ folder is completely overwritten by my_cordova_project/www/ (and specialized by the merges folder).
+
+
+TO reduce icon size (reduce font size)
+	i.your-class.ion-loading-c {
+  		font-size: 90px;
+		}
+
+
+To align text alongside a big image (Apply vertical align to image instead of text)
+	Actually, in this case it's quite simple: apply the vertical align to the image. Since it's all in one line, it's really the image you want aligned, not the text.
+
+<!-- moved "vertical-align:middle" style from span to img -->
+<div>
+  <img style="vertical-align:middle" src="https://placehold.it/60x60">
+  <span style="">Works.</span>
+</div>
+
+
+
+Angular forEach
+	angular.forEach(values, function(value, key) {
+    console.log(value);
+    console.log(key);
+});
+
+
+
+Align Header title to right
+	Add the align-title="center" attribute in your ion-nav-bar
+
+<ion-nav-bar class="..." align-title="left"> 
+    ...
+</ion-nav-bar>
+
+
+
+

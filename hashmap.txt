@@ -1,0 +1,14 @@
+When you use lists and you are looking for a special item you normally have to iterate over the complete list. This is very expensive when you have large lists.
+A hashtable can be a lot faster, under best circumstances you will get the item you are looking for with only one access.
+How is it working? Like a dictionary ... when you are looking for the word "hashtable" in a dictionary, you are not starting with the first word under 'a'. But rather you go straight forward to the letter 'h'. Then to 'ha', 'has' and so on, until you found your word. You are using an index within your dictionary to speed up your search.
+A hashtable does basically the same. Every item gets an unique index (the so called hash). You use this hash for lookups. The hash may be an index in a normal linked list. For instance your hash could be a number like 2130 which means that you should look at position 2130 in your list. A lookup at a known index within a normal list is very easy and fast.
+The problem of the whole approach is the so called hash function which assigns this index to each item. When you are looking for an item you should be able to calculate the index in advance. Just like in a real dictionary, where you see that the word 'hashtable' starts with the letter 'h' and therefore you know the approximate position.
+A good hash function provides hashcodes that are evenly distrubuted over the space of all possible hashcodes. And of course it tries to avoid collisions. A collision happens when two different items get the same hashcode.
+In C# for instance every object has a GetHashcode() method which provides a hash for it (not necessarily unique). This can be used for lookups and sorting with in your dictionary.
+
+When you start using hashtables you should always keep in mind, that you handle collisions correctly. It can happen quite easily in large hashtables that two objects got the same hash (maybe your overload of GetHashcode() is faulty, maybe something else happened).
+
+
+Basically, a HashMap allows you to store items with identifiers. They are stored in a table format with the identifier being hashed using a hashing algorithm.
+
+Typically they are more efficient to retrieve items than search trees etc.

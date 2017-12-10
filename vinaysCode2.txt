@@ -1,0 +1,7 @@
+$._data(document).events.click.length
+$._data(document).events
+$('[data-toggle=dropdown]').dropdown()
+$('[data-toggle=dropdown]').removeAttr('disabled')
+$('[data-toggle=dropdown]').attr({'disabled': 'disabled'})
+$.fn.dropdown
+$('[data-toggle=dropdown]').dropdown()

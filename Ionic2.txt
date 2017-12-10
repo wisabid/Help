@@ -1,0 +1,20 @@
+Ionic 2 Installation
+	require node js 6 version with npm 3.10.10 version (https://nodejs.org/en/)
+
+	If you r getting Darwin 15.5.0 error while installing,
+		sudo npm uninstall -g ionic
+		sudo npm install -g ionic
+		Done!
+Ref  : https://github.com/npm/npm/issues/14104	
+
+Cordova must hav installed prior to this by
+	sudo npm install -g cordova
+
+
+BRANCHING
+
+P, Sajesh (GE Digital)  
+git remote add -t $BRANCH -f origin $REMOTE_REPO
+git checkout $BRANCH 3:21 PM 
+replace branch by Ionic2_Dev 3:21 PM 
+and $remote_repo by URL 

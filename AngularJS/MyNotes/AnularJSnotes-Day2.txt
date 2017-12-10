@@ -1,0 +1,57 @@
+jsformat
+
+
+Built in filters
+	json
+	uppercase
+	limitTo
+
+2 way binding
+	text 	
+	textarea and select
+
+Validation
+
+Routing in Angular (for SPA)
+	DOM tree when a page gets loaded
+	html
+		head
+		body
+			divs
+			view/content
+in spa, only view gets refreshed while navigating	
+
+form.$invalid
+
+
+'$location'
+
+$location.url('/listing'); for redirection
+
+Douglos Crockford - JS Good 
+
+
+Services
+	value services & factory services 
+
+Test Driven Development
+
+app.js - myapp.controllers line shud b removed while code refactoring
+
+ANgular UI
+
+
+Asynchronous calls wil not render view
+
+
+$scope.$apply(function()   -- to handle asynchronouse calls
+
+
+q library to deal with asynchronous calls - promises
+
+Instructors Plunker (Q lib)
+	http://plnkr.co/edit/SnRRUU?p=preview
+Angular relies heavily on promises(in q lib)
+
+
+then, all

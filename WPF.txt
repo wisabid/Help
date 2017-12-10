@@ -1,0 +1,274 @@
+WPF
+----
+
+XAML, which stands for eXtensible Application Markup Language, is Microsoft's variant of XML for describing a GUI. 
+
+Whether you're creating a Window or a Page, it will consist of a XAML document and a CodeBehind file, which together creates the Window/Page. The XAML file describes the interface with all its elements, while the CodeBehind handles all the events and has access to manipulate with the XAML controls.
+
+HTML is not case-sensitive, but XAML is, because the control name has to correspond to a type in the .NET framework.
+
+
+Styling in WPF
+<Window.Resources>
+        <Style x:Key="commonStyles" TargetType="{x:Type FrameworkElement}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource commonStyles}">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="GE Inspira" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="15 0 0 0" />
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource commonStyles}">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+        <Style TargetType="Slider" BasedOn="{StaticResource commonStyles}">
+            
+        </Style>
+    </Window.Resources>
+
+
+Sharing a common style
+	c above..the key is BasedOn attribute
+
+
+
+Volume Control
+	http://stackoverflow.com/questions/13927017/wpf-custom-design-volume-control
+
+
+Override default styling of button in wpf
+	<Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Source="images/wht_settings.png"/>
+            </Button>
+
+
+
+Modifying control template of button
+	<Style x:Key="MyButtonStyle" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            BorderBrush="DarkGray" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+Changing button image on hover
+	<Style TargetType="Button" BasedOn="{StaticResource commonStyles}" x:Key="oneframeBackStyle">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="images/button_1framebackward.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="2,2" 
+                            BorderBrush="Black" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="images/button_1framebackward_rollover.png" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+	<Button Width="32" Height="32" Style="{StaticResource oneframeBackStyle}"></Button>
+
+
+
+Simple Variable Accessing
+Though i am not showing with background image, but still the following binding should be valid for your case:
+
+XAML
+
+<TextBox DataContext="{Binding RelativeSource={RelativeSource AncestorLevel=1,AncestorType=Window}}" 
+ Text="{Binding MyProperty}" Width="200" Height="50"/>
+C#
+
+public partial class MainWindow : Window
+    {
+        public string MyProperty { get; set; }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            MyProperty = "Sample";
+        }
+    }
+Hope this should help you!
+
+
+
+
+Databinding from code behind
+Simple Code Behind Binding
+Let’s start with a couple of examples of data binding from code behind, this isn’t good practice in WPF as it is much cleaner to perform our data binding in xaml but it is a good starting point; 
+
+In our xaml file we create a text block that is bound to the “FirstName” property as follows;   
+
+1
+2
+3
+4
+5
+6
+7
+8
+<Window x:Class="WpfApplication1.Window1"
+    xmlns=http://schemas.microsoft.com/winfx/2006/xaml/presentation
+    xmlns:x=http://schemas.microsoft.com/winfx/2006/xaml
+    Title="Window1" Height="300" Width="300"> 
+ 
+    <TextBlock Name="myTextBlock" Text="{Binding Path=FirstName}" /> 
+ 
+</Window>
+You will notice that we haven’t actually told the text block where it is going to look for this property. When the code runs the text block will look for a DataContext, it will start by checking wether it has a DataContext assigned, if not it will progress up the control tree until it reaches an item that does have a DataContext set, if no data context is found then it simply won’t perform the binding.   
+
+If we add the following code behind to set the DataContext of the window to a new Person object we will see the text block being bound to the first name.   
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+namespace WpfApplication1
+{
+     public partial class Window1 : Window
+     {
+         public Window1()
+         {
+             InitializeComponent();
+             this.DataContext = new Person { FirstName="Rowan" };
+         }
+     }
+       public class Person
+     {
+         public String FirstName { get; set; }
+         public String LastName { get; set; }
+         public String Email { get; set; }
+     }
+ }  
+Note that we could also have set the DataContext explicitly on the TextBlock as follows; 
+
+1
+this.myTextBlock.DataContext = new Person { FirstName="Rowan" };
+
+REF -- http://romiller.com/2008/04/27/wpf-databinding-overview/
+
+
+
+Controlling Animation
+	http://msdn.microsoft.com/en-us/library/ms744905(v=vs.110).aspx
+
+
+Messagebox
+	System.Windows.MessageBox.Show("Hello, world!");
+
+
+
+Combined Trigger (onmouseover of a toggled state)
+	<Style TargetType="ToggleButton" BasedOn="{StaticResource commonStyles}" x:Key="toggleButtonStyle">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Margin" Value="0 0 5 0" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="images/playBtnIcon.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="2,2" 
+                            BorderBrush="Black" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="images/playBtnIconRollover.png" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="images/pauseBtn.png" />
+                                    </Setter.Value>
+                                </Setter>                                
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                    <Condition Property="IsChecked" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="images/pauseBtnRollover.png" />
+                                    </Setter.Value>
+                                </Setter>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+restrict window resize
+	give maxWidth maxHeight and minWidth and MinHeight
+		OR
+	ResizeMode="NoResize"

@@ -1,0 +1,7 @@
+We do have an issue in IIDX map module due to which the street view is not enabled by default on page load. Please see inline for more details 
+Ref: 
+ http://www.gesdh.com/assets/iidx/docs/examples/mapping/map-search-and-evaluate.html 
+ http://www.gesdh.com/assets/iidx/docs/examples/mapping/map-fullscreen-cluster.html 
+
+We do also have a colab post related to this issue - http://colab.ge.com/dashboard/canvas/v/4fff01e6eed5552d77000457/posts/674847285846224896 
+Appreciate any kind of help in this regard.

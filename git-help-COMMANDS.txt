@@ -1,0 +1,300 @@
+workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g.i.cs: needs merge
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/DesignTimeResolveAssemblyRef
+erencesInput.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/DesignTimeResolveAssemblyRef
+erencesInput.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csproj.FileList
+Absolute.txt'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csproj.FileList
+Absolute.txt'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csproj.Generate
+Resource.Cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csproj.Generate
+Resource.Cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csprojResolveAs
+semblyReference.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.csprojResolveAs
+semblyReference.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.exe'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.exe'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.g.resources'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.g.resources'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.pdb'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI.pdb'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_Content.g.cs'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_Content.g.i.cs'
+
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_Content.g.i.cs'
+
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_MarkupCompile.c
+ache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_MarkupCompile.c
+ache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_MarkupCompile.i
+.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI_MarkupCompile.i
+.cache'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.baml'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.baml'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g.cs'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g.cs'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g.i.cs'
+rm 'workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g.i.cs'
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git rm workingcopy\Locovisio
+nUI\LocovisionUI\bin
+workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.exe: needs merge
+workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.pdb: needs merge
+fatal: not removing 'workingcopy\LocovisionUI\LocovisionUI\bin' recursively with
+out -r
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git rm workingcopy\Locovisio
+nUI\LocovisionUI\bin -r
+workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.exe: needs merge
+workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.pdb: needs merge
+rm 'workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.exe'
+rm 'workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.exe'
+rm 'workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.pdb'
+rm 'workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI.pdb'
+rm 'workingcopy/LocovisionUI/LocovisionUI/bin/Debug/MediaFile.dll'
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git status
+On branch abid-wip
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        new file:   .gitignore
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.exe
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.exe.config
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.pdb
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.vshost.exe
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.vshost.exe.config
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/LocovisionUI
+.vshost.exe.manifest
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/bin/Debug/MediaFile.dl
+l
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/App.g.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/App.g.i.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/DesignTimeRe
+solveAssemblyReferencesInput.cache
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.Properties.Resources.resources
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.csproj.FileListAbsolute.txt
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.csproj.GenerateResource.Cache
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.csprojResolveAssemblyReference.cache
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.exe
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.g.resources
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+.pdb
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+_Content.g.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+_Content.g.i.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+_MarkupCompile.cache
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/LocovisionUI
+_MarkupCompile.i.cache
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.b
+aml
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g
+.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/MainWindow.g
+.i.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/TemporaryGen
+eratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/TemporaryGen
+eratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+        deleted:    workingcopy/LocovisionUI/LocovisionUI/obj/Debug/TemporaryGen
+eratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git commit -m "removed exes"
+
+[abid-wip e3c2db9] removed exes
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git pull origin master
+abid.shamimpm@openge.ge.com's password:
+Could not chdir to home directory /home/abid.shamimpm: No such file or directory
+
+From ssh://openge.ge.com/gitroot/locovision
+* branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout master
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        workingcopy/LocovisionUI/LocovisionUI.v11.suo
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git status
+On branch abid-wip
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   workingcopy/LocovisionUI/LocovisionUI.v11.suo
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        workingcopy/LocovisionUI/LocovisionUI/bin/
+        workingcopy/LocovisionUI/LocovisionUI/obj/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git rm workingcopy\Locovisio
+nUI\LocovisionUI.v11.suo
+error: the following file has local modifications:
+    workingcopy/LocovisionUI/LocovisionUI.v11.suo
+(use --cached to keep the file, or -f to force removal)
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git rm workingcopy\Locovisio
+nUI\LocovisionUI.v11.suo -f
+rm 'workingcopy/LocovisionUI/LocovisionUI.v11.suo'
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git commit -m "removed suo f
+ile"
+[abid-wip 4de036d] removed suo file
+1 file changed, 0 insertions(+), 0 deletions(-)
+delete mode 100644 workingcopy/LocovisionUI/LocovisionUI.v11.suo
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git status
+On branch abid-wip
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        workingcopy/LocovisionUI/LocovisionUI/bin/
+        workingcopy/LocovisionUI/LocovisionUI/obj/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git branch
+* abid-wip
+  master
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git push origin abid-wip
+abid.shamimpm@openge.ge.com's password:
+Could not chdir to home directory /home/abid.shamimpm: No such file or directory
+
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 996 bytes | 0 bytes/s, done.
+Total 9 (delta 4), reused 0 (delta 0)
+remote: * Starting Gforge pre-receive hook
+remote:
+remote:         Branches to be processed: abid-wip
+remote:
+remote: * Starting Gforge post-receive script.
+remote:
+remote:         Creating commit associations, please wait...
+remote:
+remote: All updates were successfully processed.
+remote:
+To ssh://abid.shamimpm@openge.ge.com/gitroot/locovision
+   8f88c50..4de036d  abid-wip -> abid-wip
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout abid-wip
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        workingcopy/LocovisionUI/LocovisionUI.v11.suo
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout abid-wip
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        workingcopy/LocovisionUI/LocovisionUI.v11.suo
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git branch
+  abid-wip
+* master
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout abid-wip
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        workingcopy/LocovisionUI/LocovisionUI.v11.suo
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git branch
+  abid-wip
+* master
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   workingcopy/LocovisionUI/LocovisionUI.v11.suo
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        workingcopy/LocovisionUI/LocovisionUI/bin/
+        workingcopy/LocovisionUI/LocovisionUI/obj/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git rm workingcopy\Locovisio
+nUI\LocovisionUI.v11.suo -f
+rm 'workingcopy/LocovisionUI/LocovisionUI.v11.suo'
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git commit -m "removed suo f
+ile"
+[master e9aaf3e] removed suo file
+1 file changed, 0 insertions(+), 0 deletions(-)
+delete mode 100644 workingcopy/LocovisionUI/LocovisionUI.v11.suo
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git branch
+  abid-wip
+* master
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git push origin master
+abid.shamimpm@openge.ge.com's password:
+Could not chdir to home directory /home/abid.shamimpm: No such file or directory
+
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 481 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: * Starting Gforge pre-receive hook
+remote:
+remote:         Branches to be processed: master
+remote:
+remote: * Starting Gforge post-receive script.
+remote:
+remote:         Creating commit associations, please wait...
+remote:
+remote: All updates were successfully processed.
+remote:
+To ssh://abid.shamimpm@openge.ge.com/gitroot/locovision
+   e3afa0b..e9aaf3e  master -> master
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>git checkout abid-wip
+Switched to branch 'abid-wip'
+
+C:\gbid\Work\Locovision\LocovisionGITnew\locovision>

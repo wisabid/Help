@@ -1,0 +1,25 @@
+For IE compatibility mode,
+	http://msdn.microsoft.com/en-us/library/windows/desktop/cc288325(v=vs.85).aspx
+	Also jsp setheader for overriding the browser changes of a user
+
+For disabling cache in server level
+	Add response.setHeader(“Cache-Control”,”no-cache, no-store”);
+
+
+
+Conditional Hacks in html
+<!--[if lte IE 6]>
+<INPUT style="COLOR:#363636; FONT-SIZE: 10px; FONT-WEIGHT: bold;align:top" type=button name="but_export" value="Export" onclick="fnopenexport();" <%if (intDataSize <= 0) { %> disabled <% } %> >  	
+ <![endif]-->
+<!--[if gte IE 7]>
+<INPUT style="COLOR:#363636; FONT-SIZE: 10px; FONT-WEIGHT: bold;align:top" type=button name="but_export" value="Export" onclick="fnopenexportIE8();" <%if (intDataSize <= 0) { %> disabled <% } %> >
+<![endif]-->
+<!--[if !IE]>
+	<INPUT style="COLOR:#363636; FONT-SIZE: 10px; FONT-WEIGHT: bold;align:top" type=button name="but_export" value="Export" onclick="fnopenexportIE8();" <%if (intDataSize <= 0) { %> disabled <% } %> >
+<![endif]-->
+
+
+
+Restrict the resizing feature of textarea in chrome
+	Add css : 
+		resize:none;

@@ -1,0 +1,30 @@
+Bootstrap carousel methods
+
+
+.carousel(options)
+
+Initializes the carousel with an optional options object and starts cycling through items.
+
+Copy
+$('.carousel').carousel({
+  interval: 2000
+})
+.carousel('cycle')
+
+Cycles through the carousel items from left to right.
+
+.carousel('pause')
+
+Stops the carousel from cycling through items.
+
+.carousel(number)
+
+Cycles the carousel to a particular frame (0 based, similar to an array).
+
+.carousel('prev')
+
+Cycles to the previous item.
+
+.carousel('next')
+
+Cycles to the next item.

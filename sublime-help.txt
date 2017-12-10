@@ -1,0 +1,108 @@
+TUTOR - Jeffrey Way
+
+Control D - Multiple cursors
+Shift control L - multiple lines edit
+Shift control P - Command Palette - change syntax to javascript etc
+
+Control P - open files (fussy searching available)
+
+Control R - for searching symbols - to go to methods
+
+short cut for find methods or style selectors  - control P ->cppib.css@
+
+Code Snippets - control+shift+P -> syntax:javascript ->control+shift+p ->Snippet
+
+create ur own code snippets
+
+control / - comment/uncomment
+
+control J - for removing white space and enter keys between texts
+
+
+Installing Package Control
+--------------------------
+go to https://sublime.wbond.net/installation
+Click the Preferences > Browse Packages… menu
+Browse up a folder and then into the Installed Packages/ folder
+Download Package Control.sublime-package and copy it into the Installed Packages/ directory
+Restart Sublime Text
+Done!
+
+You would see Package Settings under Prefernce menu after successfull installation.
+
+Install Js lint
+--------------
+control shift P - type "install Package"
+choose jslint from the list
+View > Show Console
+Done!
+
+Turn on JS LINT
+--------------
+Now turn on Run JSLint on Save. Go to Preferences > Package Settings > JSLint > Settings > User. This is the most convenient way to lint through your Javascript code piles.
+
+Paste in:
+{
+
+    // Don't agree with Crockford about whitespace usage
+    "jslint_options": "--white",
+
+    // run jslint on save.
+    "run_on_save": true,
+
+    // debug flag.
+    "debug": true
+}
+
+Save!
+
+Now when you save a .js file you see some output at the bottom of the screen:
+
+
+Control Shift C for Color Picker
+
+Control Click - places cursor everywer u click
+
+
+control alt f - can i use in CSS  -disabled this for now
+
+
+Sublime Tortoise SVN
+- [alt+c] : commit current file.
+  - [alt+u] : update current file.
+  - [alt+r] : revert current file.
+
+
+JSHINT
+	Control Shift P
+	Type jsHint
+
+
+
+
+CONTROL SHIFT T - Open Terminal from current file
+
+
+
+Alignment - Control Alt A
+
+
+Control Alt F - jsFormat
+
+
+Find all matched
+	Control F - 
+	and then Alt Enter
+
+	Toggle Regular Expressions	Alt + R
+Toggle Case Sensitivity	Alt + C
+Toggle Exact Match	Alt + W
+Find Next	Enter
+Find Previous	Shift + Enter
+Find All	Alt + Enter
+
+
+Indenting html
+	Edit - Line - Reindent
+	
+

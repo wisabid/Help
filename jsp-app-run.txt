@@ -1,0 +1,8 @@
+C:\tomcat\apache-tomcat-6.0.37\bin>startup
+
+C:\tomcat\apache-tomcat-6.0.37\bin>shutdown
+
+url - http://localhost:8080/examples/jsp/jsp2/simpletag/hello.jsp
+
+Env Variable - C:\ActiveProcess\jdk1.6   (JAVA_HOME)
+
