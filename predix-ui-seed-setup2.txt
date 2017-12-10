@@ -1,0 +1,63 @@
+PREDIX UI SEED SET UP : https://www.predix.io/docs#Je2y7sCv
+
+1. To clone your copy of the Predix UI Seed and start a Predix UI Seed project, at a command prompt, enter.
+	git clone https://github.com/PredixDev/predix-seed.git
+
+
+2. To change to the predix-seed project directory, at a command prompt, enter:
+	cd predix-seed
+
+3. To install the gulpbuild system and bower front end package manager, at a command prompt, enter:
+	npm install gulp gulp-cli bower -g
+	SKIP IF ALREADY INSTALLED
+
+4. To install the Predix UI Seed dependencies for these utilities, at a command prompt, enter:
+	npm install
+	bower install
+   The package.json file lists the build-time dependencies. The bower.json file lists the run-time dependencies.
+
+5. To verify that the Predix UI Seed files have been successfully installed:, at a command prompt, enter
+	gulp
+	You can display your copy of the Predix UI Seed in a web browser by entering http://localhost:5000/ in the address bar.
+http://localhost:5000/
+
+
+Deploying the Predix UI Seed to Cloud Foundry
+
+1. Use the Cloud Foundry CLI to log into Cloud Foundry.
+	cf login -a <API_Endpoint>
+	cf login -a https://api.system.aws-usw02-pr.ice.predix.io
+
+2. To change to the predix-seed project directory, at a command prompt, enter:
+	cd predix-seed
+
+3. Edit the manifest.yml file in the predix-seed directory to update the placeholder value predix-ui-seed to your desired application name <app_name>
+Record <app_name> for later use.
+
+4. Use gulp to create a distribution version of your Predix UI Seed web application.
+	gulp dist
+
+
+5. Use the Cloud Foundry CLI to deploy your Predix UI Seed web application -<app_name> to Cloud Foundry:
+	cf push
+	Note: During normal development, run the gulp dist command each time before you perform the cf push operation to deploy your Predix UI Seed web application to Cloud Foundry.
+
+
+
+6. See your Predix UI Seedweb application run:
+Use the Cloud Foundry CLI to see your Predix UI Seed web application in Cloud Foundry:
+cf apps
+Enter your Predix UI Seed web application URL into a web browser. using HTTPS For example:
+https://<app_name>.run.aws-usw02-pr.ice.predix.io
+Your web browser displays your Predix UI Seed web application.
+
+See the Predix UI Seed guide that demonstrates the use of Predix UI Seed web application starter kit to implement these features:
+Application Navigation
+Responsive Layout
+Routing
+Data Binding
+View Switching
+Data Visualization
+Data and Time Input
+Service Integration 
+

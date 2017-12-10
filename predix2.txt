@@ -1,0 +1,38 @@
+Predix Account
+	abid.shamimpm@ge.com	
+	Ibaho%2010GE
+
+	predix.io
+
+Define Proxy Connections in CMD
+
+	set HTTP_PROXY=cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+	set HTTPS_PROXY=http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+Unset proxy connections
+	unset HTTP_PROXY
+	unset HTTPS_PROXY
+
+Pre requisites
+	CF : 
+		https://github.com/cloudfoundry/cli#downloads
+
+Tutorials
+	https://www.predix.io/resources/tutorials
+Dev Box
+	https://www.predix.io/services/other-resources/devbox.html
+
+
+Sample Hello World App in Predix
+--------------------------------
+REF : https://www.predix.io/docs/?b=#Uva9INX3
+
+	cf login -a https://api.system.aws-usw02-pr.ice.predix.io
+	git clone https://github.com/PredixDev/Predix-HelloWorld-WebApp
+	Edit manifest file and give an app name
+	go inside application folder
+	cf push
+
+	cf apps
+	open browser and hit https://predix-helloworld-webapp-abid.run.aws-usw02-pr.ice.predix.io/
+	Done!

@@ -1,0 +1,48 @@
+Scrum
+
+Impediments - blockers or circumstances leading to blocking
+
+
+Yes! Agile is the broader umbrella which Scrum falls under. Agile has four main values and twelve principles. Scrum has its own set of values and principles and provides a lightweight “framework” to help teams become Agile.
+
+Name some other Agile frameworks.
+
+There are other frameworks in addition to Scrum, such as Kanban, Test Driven Development, and Feature Driven Development. Mention frameworks you have followed and provide scenarios.
+
+
+What is velocity?
+
+Velocity is the average number of points from that past 3 – 4 sprints. It is used to help predict when backlog items will be delivered. 
+
+What type of metrics or reports have you used?
+
+Sprint, release burn-down, and burn-up charts are standard reports. Most companies also want to understand how many stories were committed versus completed per sprint and the number of defects identified post-release to production.
+
+
+What type of requirements did you use for your teams?
+
+Requirements in Scrum are written as user stories using a standard, “As a ___, I want___ so that I can ___.” As a Scrum Master, you don’t necessarily write user stories, but you would assist the Product Owner to ensure that user stories are written, prioritized, and ready for the sprint.
+
+
+
+Explain what is “Velocity”?
+
+“Velocity” is the total effort a team is capable of in a sprint.  The number is obtained by adding all the story points from the last sprint’s stories.  It is a guideline for the team to understand how many stories they can do in a sprint.
+
+
+
+Mention what is the difference between Sprint and Iteration in Scrum?
+
+Iteration: It is a terminology used to define single development cycle in general agile methods. It is a common term used in the iterative and Incremental development process.
+Sprint: It is used to define one development cycle or iterative step in a specialized agile method referred as Scrum. Sprint is scrum specific, and not all forms of iterations are Sprints.
+
+
+
+Explain what velocity in scrum is and how it is measured?
+
+Velocity in a scrum is a measurement of how much the team gets work done in an iterations or sprint. It is measured by
+
+V= Number of total story points / One iteration
+
+Ref: https://career.guru99.com/top-22-scrum-interview-questions/
+https://www.simplilearn.com/agile-scrum-master-interview-questions-article

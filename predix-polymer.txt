@@ -1,0 +1,95 @@
+Update the bower component with latest version
+	bower install px-vis-timeseries#latest --save
+
+Polymer Drop down
+	<px-dropdown id="tagDropdown" display-value="Select Station">
+                <px-dropdown-content items="{{tags}}"></px-dropdown-content>
+              </px-dropdown>
+
+
+Install yeoman (Using yeoman, you can create a new predix component of your own)
+	npm install -g yo
+	npm install -g generator-px-comp
+Ref : http://yeoman.io/learning/
+	yo --version
+
+	yo px-comp
+
+	gulp sass
+	gulp serve
+	localhost:8080 & localhost:3001
+
+Ref : https://github.com/PredixDev/generator-px-comp
+
+
+Predix yeoman
+	https://github.com/PredixDev/generator-px-comp
+
+
+Markers on Map
+	Use px-map-marker-symbol component
+
+Bring up threshold line in timeseries graph (threshold data must match with series config you provide)
+	threshold-data='[{"for":"series0","type":"max","value":1.6},{"for":"series0","type":"min","value":0.14}]'
+	series0 : {
+		type: "line",
+            // name: displayTag.val,
+            name: "Current",
+            // This seems like it should work, but causes an error.
+            // x: xKey,
+            // "color": "rgb(255, 0, 0)",
+            x: "x0",
+            y: yKey,
+            // yAxisUnit: displayTag.unit,
+            yAxisUnit: "Current",
+            axis: {
+              id: "axis" + index,
+              side: (index % 2 === 0) ? "left" : "right",
+              number: index
+            }
+
+	}
+
+
+Predix drop down content width problem
+	Use px-dropdown-content inside px-dropdown
+
+
+Integrate highcharts & jquery to polymer
+	var container = Polymer.dom(this.root).querySelector('#container'),
+            $container = $(container);
+
+        $container.highcharts({
+				chart: {
+					.
+					.
+					.
+					.
+	this.appendChild(this.$.container);
+
+
+Mulitple points for a single category in highcharts (by giving array with x and y axis values instead of a single value)
+	 series: [
+			     {
+			        name: 'Intercity Express',
+			        data: [1493815788245, [1, 1493815788345], [1, 1493815788395], 1493815788465, 1493815788570, 1493815788575]
+			    },
+			     {
+			        name: 'XYZ Special Express',
+			        data: [1493815788285, 1493815788345, [2, 1493815788465], 1493815788590, 1493815788790]
+			    }],
+
+Window Resize Trigger
+	setTimeout(function(){
+          window.dispatchEvent(new Event('resize'));
+            document.getElementById('spinner').style.display = "none";
+        }, 1000);
+
+
+Limit iteration in a foreach loop (slice)
+	evt.detail.response.slice(0, 50).forEach(function(item) {
+
+
+Scroll to top
+	document.querySelector('my-container').scrollTop = 0;
+	

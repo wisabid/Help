@@ -1,0 +1,19 @@
+Define Proxy Connections in CMD
+
+	set HTTP_PROXY=cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+	set HTTPS_PROXY=http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80
+
+
+Unset proxy connections
+	unset HTTP_PROXY
+	unset HTTPS_PROXY
+
+
+set npm proxy
+	npm config set proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80    
+	npm config set https-proxy http://cis-india-pitc-bangalorez.proxy.corporate.ge.com:80  
+
+
+How to unset npm config proxy
+	npm config delete proxy
+	npm config delete https-proxy

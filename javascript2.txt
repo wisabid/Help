@@ -1,0 +1,129 @@
+if the junk text is forcing the column width to increase in datatable
+	sWidth is already set as 30%
+
+	th {
+	width:30% !important;
+	max-width:30% !important;
+	}
+	td {
+	max-width:30%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break : break-all;
+	}
+
+
+Iterating Object
+	As of JavaScript 1.8.5 you can use Object.keys(obj) to get an Array of properties defined on the object itself (the ones that return true for obj.hasOwnProperty(key)).
+	Object.keys(obj).forEach(function(key,index) {
+    		// key: the name of the object key
+    		// index: the ordinal position of the key within the object 
+	});
+
+
+Breaking a forEach loop
+	var BreakException = {};
+
+try {
+  [1, 2, 3].forEach(function(el) {
+    console.log(el);
+    if (el === 2) throw BreakException;
+  });
+} catch (e) {
+  if (e !== BreakException) throw e;
+}
+
+
+Finding in an array of object (using $.grep)
+	var result = $.grep(myArray, function(e){ return e.id == id; });
+	alert (result[0].name)	
+
+	EG: 
+		var grepReturn;
+                $.each(solutionList,function(prop,value){
+                	grepReturn = $.grep(urgRepairDescArr, function(e){ return e.id == value.urgRepair.toUpperCase(); });
+                	value.urgRepairDesc = grepReturn.length?grepReturn[0].name:value.urgRepair;
+
+                	grepReturn = $.grep(estmTimeRepairDescArr, function(e){ return e.id == value.estmTimeRepair.toUpperCase(); });
+                	value.estmTimeRepairDesc = grepReturn.length?grepReturn[0].name:value.estmTimeRepair;
+                });
+                grepReturn = null;
+
+
+jquery data table error - Cannot read property 'fnSetData' of undefined
+	Solution : Make sure the number of elements in your "aoColumns" matches the number of columns you actually have in your table.
+	Ref : https://stackoverflow.com/questions/23190363/data-table-error-cannot-read-property-fnsetdata-of-undefined
+
+
+Callback of toggleCLass (not working as expected)
+	$('#mydiv').toggleClass('newclass', 5000).promise().done(function(){alert("done")});
+
+
+$.when and then (no variables can b declared inside $.when..also notice comma after 1st ajax call. so semicolon)
+	$.when(
+
+				$.ajax({
+					type: 'GET',
+					url: '/RMDWeb/fetchUnitStickyDetails?caseId='+caseId,
+					dataType: 'json',
+					success: function(stickyDetails) {
+						unitSticky=stickyDetails;
+					}
+				}), 
+
+				$.ajax({
+					type: 'GET',
+					url: '/RMDWeb/fetchCaseStickyDetails?caseId='+caseId,
+					dataType: 'json',	
+					success: function(stickyDetails) {
+						caseSticky=stickyDetails;
+					}
+				})
+
+		).then(function() {
+
+		});
+
+
+
+Check html within a string
+	/<[a-z][\s\S]*>/i.test(message) returns true if message contains any html tag
+
+
+Html in string
+str = "hello, <b>my name is</b> jQuery.",
+  html = $.parseHTML( str ),
+
+
+
+Closest in jquery
+	The closest() method returns the first ancestor of the selected element. An ancestor is a parent, grandparent, great-grandparent, and so on
+
+Disable textbox suggestions or history
+	Try this attribute in your input tag:
+
+	autocomplete="off"
+
+
+Iterating through DOM elements in jquery (each)
+	this.$('.plotParameter').each(function() {
+             $(this).typeahead();
+             $(this).data('typeahead').source = rxs;
+            });
+	$( "li" ).each(function( index ) {
+  		console.log( index + ": " + $( this ).text() );
+	});
+
+
+
+$.each is for iterating over both objects and arrays
+	$.each([ 52, 97 ], function( index, value ) {
+  		alert( index + ": " + value );
+	});
+	var obj = {
+  		"flammable": "inflammable",
+  		"duh": "no duh"
+	};
+	$.each( obj, function( key, value ) {
+  		alert( key + ": " + value );
+	});
