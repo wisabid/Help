@@ -1,0 +1,53 @@
+MY INTERVIEW QUESTIONS
+----------------------
+1. There is a webpage. I wanna make every single text that i see on page,editable. How?
+document.body.contentEditable = true;
+
+2. How to make a triangle with plain css?
+By setting border with different colors to a div and setting div height n width to 0.
+
+3. Whats the ouput of 
+function foo(nm) {
+	this.name = "Abid"
+	return .....
+}
+
+JS puts semicolon at the end of statement even if u forget
+
+4. Whats IFFY and wer its used?
+IIFE
+
+5. How do we pass arguments to a callback function?
+var callbk = function(A) {
+	return function() {
+		alert('hii'+A);
+	}
+somefunc(1, 2, callbk(3))
+
+6. What are template strings?
+`This is a template string ${name}`
+
+7. 
+
+callsomefunc(callbk)
+}
+
+
+8. whats the output of the following : 
+	function(y) {
+		console.log(this.length);
+	}
+	var x = {
+		length : 5;
+		method: function(y) {
+			arguments[0]();
+		}
+	};
+	x.method(y, 1)
+Ans : 2 (Arguments Objectlength is 2)
+
+
+9. Difference between let and var
+let wont get hoisted
+
+10.
