@@ -50,4 +50,36 @@ Ans : 2 (Arguments Objectlength is 2)
 9. Difference between let and var
 let wont get hoisted
 
-10.
+10. is it pass by value or pass by ref in js?
+var a = 10;
+let changeval = function(val) {
+	val = 20;
+}
+changeval(a);
+console.log(a); 
+The above example is also pass by reference. 
+Rule : Primitive values (numbers, strings etc) cannot be mutated (obj.name = "new name" is a mutating exampple..basically modifiyin existing values of an obj or arr..).
+And if sumthin cannot b mutated, a new value assigned to a primitive value will generate a new address in memory.
+If it can b mutated, it is actually pointing to the same reference. hence pass by reference.
+val = 20; is actually creating new reference n not pointing to the same reference.so a copy is created.
+changeval({name:"Abid"}) n if 
+let changeval = function(val) {
+	val = {}; //this is not mutation.so wil create another new reference
+}
+this wil also log same old {name:"Abid"}. coz in function, v r not mutating but creating another reference by initializing.
+
+10. call, apply, bind (borrow functionalities from other object. multiple inheritance can be made possible with this)
+	apply uses array as an argument
+	Math.min.apply(null, [1,2,3]); //rem min cannot be applied on an array. but this is made possible here
+
+11. difference between Object.create and new operator
+	Former wont call constructor but latter does
+
+
+12. write a simple closure
+var a = 10;
+var add = function() {
+return a+1;
+}
+add(); //is d simplest closure..verify by console.dir(add)
+
