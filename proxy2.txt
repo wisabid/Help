@@ -23,4 +23,26 @@ Unset proxy through cmd & have direct internet connection
 	netsh winhttp reset proxy
 
 Git : Couldnt resolve proxy
-	git config --global --unset http.proxy	
+	git config --global --unset http.proxy
+
+To solve this type of issue
+
+Open GIT Bash & Run below command
+git config --global --unset http.proxy
+
+ 
+
+Check the environment variables with :
+$echo $http_proxy
+
+$echo $https_proxy
+
+$echo $HTTPS_PROXY
+
+$echo $HTTP_PROXY
+
+If any of these environment variables are set then unset them by just using http_proxy= then enter will unset those using below command
+
+git config --global --unset http.proxy
+
+git config --global --unset https.proxy	
