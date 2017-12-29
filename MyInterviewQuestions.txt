@@ -12,6 +12,7 @@ function foo(nm) {
 	return .....
 }
 
+
 JS puts semicolon at the end of statement even if u forget
 
 4. Whats IFFY and wer its used?
