@@ -17,3 +17,10 @@ set npm proxy
 How to unset npm config proxy
 	npm config delete proxy
 	npm config delete https-proxy
+
+
+Unset proxy through cmd & have direct internet connection
+	netsh winhttp reset proxy
+
+Git : Couldnt resolve proxy
+	git config --global --unset http.proxy	
