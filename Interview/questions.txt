@@ -1,0 +1,202 @@
+What excites or interests you about coding?
+
+What is a recent technical challenge you experienced and how did you solve it?
+
+
+What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+
+
+If you have 5 different stylesheets, how would you best integrate them into the site?
+
+How would you optimize a website's assets/resources?
+
+Name 3 ways to decrease page load (perceived or actual load time).
+
+What tools do you use to test your code's performance?
+
+What is FOUC? How do you avoid FOUC?
+A flash of unstyled content (FOUC) is an instance where a web page appears briefly with the browser's default styles prior to loading an external CSS stylesheet, due to the web browser engine rendering the page before all information is retrieved.
+
+
+Rule 1 - Make Fewer HTTP Requests
+Rule 2 - Use a Content Delivery Network
+Rule 3 - Add an Expires Header
+Rule 4 - Gzip Components
+Rule 5 - Put Stylesheets at the Top
+Rule 6 - Put Scripts at the Bottom
+Rule 7 - Avoid CSS Expressions
+Rule 8 - Make JavaScript and CSS External
+Rule 9 - Reduce DNS Lookups
+Rule 10 - Minify JavaScript
+Rule 11 - Avoid Redirects
+Rule 12 - Remove Duplicate Scripts
+Rule 13 - Configure ETags
+Rule 14 - Make AJAX Cacheable
+
+
+Explain some of the pros and cons for CSS animations versus JavaScript animations.
+
+
+
+HTML Questions:
+What's the difference between standards mode and quirks mode?
+
+How do you serve a page with content in multiple languages?
+
+What are data- attributes good for?
+
+Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+
+
+CSS Questions:
+
+What is the difference between classes and ID's in CSS?
+
+Describe Floats and how they work.
+
+Explain CSS sprites, and how you would implement them on a page or site.
+
+How would you approach fixing browser-specific styling issues?
+
+Have you used or implemented media queries or mobile specific layouts/CSS?
+
+What are some of the "gotchas" or techniques for writing efficient CSS?
+
+Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
+What does * { box-sizing: border-box; } do? What are its advantages?
+
+List as many values for the display property that you can remember.
+
+What's the difference between a relative, fixed, absolute and statically positioned element?
+
+The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)? How can you use this system to your advantage?
+
+What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+
+
+
+JS Questions:
+
+Explain event delegation
+Explain how this works in JavaScript
+Explain how prototypal inheritance works
+How do you go about testing your JavaScript?
+AMD vs. CommonJS?
+
+IIFE - Immediately-invoked function expression
+
+Scopes in JS
+
+
+Explain why the following doesn't work as an IIFE: function foo(){ }();.
+What needs to be changed to properly make it an IIFE?
+
+What's the difference between a variable that is: null, undefined or undeclared?
+How would you go about checking for any of these states?
+
+
+What is a closure, and how/why would you use one?
+
+What's a typical use case for anonymous functions?
+
+What's a typical use case for anonymous functions?
+
+How do you organize your code? (module pattern, classical inheritance?)
+
+
+Difference between: function Person(){}, var person = Person(), and var person = new Person()?
+
+What's the difference between .call and .apply?
+
+
+Explain AJAX in as much detail as possible.
+
+
+Explain how JSONP works (and how it's not really AJAX).
+
+Have you ever used JavaScript templating?
+If so, what libraries have you used?
+Explain "hoisting".
+Describe event bubbling.
+What's the difference between an "attribute" and a "property"?
+
+
+Difference between document load event and document ready event?
+
+
+What is "use strict";? what are the advantages and disadvantages to using it?
+
+
+Explain what a single page app is and how to make one SEO-friendly.
+
+
+Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+
+
+Can you explain the difference between GET and POST?
+
+
+
+Angular JS questions
+--------------------
+How do you share data between controllers?
+Create an AngularJS service that will hold the data and inject it inside of the controllers.
+
+Using a service is the cleanest, fastest and easiest way to test.
+However, there are couple of other ways to implement data sharing between controllers, like:
+– Using events
+– Using $parent, nextSibling, controllerAs, etc. to directly access the controllers
+– Using the $rootScope to add the data on (not a good practice)
+The methods above are all correct, but are not the most efficient and easy to test.
+Here is a good video explanation on egghead.io.
+
+
+
+What is the difference between ng-show/ng-hide and ng-if directives?
+ng-show/ng-hide will always insert the DOM element, but will display/hide it based on the condition. ng-if will not insert the DOM element until the condition is not fulfilled.
+
+ng-if is better when we needed the DOM to be loaded conditionally, as it will help load page bit faster compared to ng-show/ng-hide.
+
+If you were to migrate from Angular 1.4 to Angular 1.5, what is the main thing that would need refactoring?
+Changing .directive to .component to adapt to the new Angular 1.5 components
+
+
+
+How would you specify that a scope variable should have one-time binding only?
+By using “::” in front of it. This allows the check if the candidate is aware of the available variable bindings in AngularJS.
+
+
+
+What is the difference between one-way binding and two-way binding?
+– One way binding implies that the scope variable in the html will be set to the first value its model is bound to (i.e. assigned to)
+– Two way binding implies that the scope variable will change it’s value everytime its model is assigned to a different value
+
+
+
+
+How do you reset a $timeout, $interval(), and disable a $watch()?
+To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function.
+
+
+Explain what is a $scope in AngularJS
+Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events. Scopes are objects that refer to the model. They act as glue between controller and view.
+
+This question is important as it will judge a persons knowledge about a $scope object, and it is one of the most important concepts in AngularJS. Scope acts like a bridge between view and model.
+
+
+
+What is $rootScope and how does it relate to $scope?
+$rootScope is the parent object of all $scope Angular objects created in a web page.
+
+
+
+
+
+NODE JS QUESTIONS
+------------------------
+
+
+
+
+

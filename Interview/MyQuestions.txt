@@ -1,0 +1,44 @@
+Functions in JS (make him/her write)
+the other way of defining a function
+wat r those functions called - anonymous functions
+wer is it being used
+
+wat is an obj in JS
+create an empty object
+diff ways of creating an object
+is var a an object
+how do u identify an object in JS - typeof & instanceof
+
+
+pass by value & pass by reference
+R arrays passed by ref?s
+how do u make a copy of an array?(cloning) (var newarr = sourceArray.slice(0)
+how do u make a copy of an object? $.extend({}, sourceObj, true)
+
+JS hoisting
+write an example
+JS hoisting of functions - function abc() will be hoisted where as var abc = function() will not b hoisted
+wat r var abc = function() type functions called - function expression
+
+usage of anonymous functions - callbacks
+
+Inheritance in JS
+wat type of inheritance is supported in JS?
+how do u inherit car from vehicle - car.prototype = new Vehicle()
+wat is a constructor?
+how do u avoid calling the constructor of parent class when u instantiate - car.prototype.constructor = car;
+
+
+closure
+ask loop example of li tags
+
+
+contextual selecting in js
+require js
+bootstrap js
+ur editor?
+fav browser?
+
+
+
+

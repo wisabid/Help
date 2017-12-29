@@ -1,0 +1,4 @@
+.map for debugging
+ecma 6
+geolocation api 
+web worker

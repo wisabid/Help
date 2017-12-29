@@ -1,0 +1,51 @@
+if stupid silly work given?
+time?
+another actitivity?
+a new technology?
+approach if a new task given 
+lap?
+if asked to come to ge ofc
+
+
+
+26531
+
+html - 8
+js - 7
+css - 8
+
+modules design patterns
+svg geo locations
+
+
+1. what if you are given a stupid silly work such as image editing/mock up creation?
+2. What if you are already on a deadline with new task and if something goes seriosuly wrrong with ur prev work?
+3. what will be your approach if u r given a task?
+4. what if u r asked to estimate an unknown task?
+5. how wil u make sure the deadline is met?
+6. what will u do if u learn that u cannot meet the deadline?
+7. how good r u at learning new things?
+8. what if u r stuck somewer at work? 
+9. do u hav experts around for seeking help?
+10. do u work on a lap?
+11. ready to come to GE if asked?
+12. what will u do if you have a planned vacation?
+13. how punctual r u in attending the meetings n reporting to work?
+14. what is that you felt u shud improve while at work?
+15. how will u build that good image n reputation wich makes others approach u for help in work?
+16. what if you are bugged by some team member for help if you are already working on something.
+17. what if you encounter something complicated? what will be your approach or take on it?
+18. what if you had to go on an unplanned leave? what will be the 1st thing you shud b doing at work ?
+19. what if you did some serious mistake and ur higher ups got to know abt it? what will b ur take on it?
+20. what if you are asked to undertake another members work on his absence? what would be your approach?
+20. what excites u at work?
+21. any questions for me?
+
+coding task :
+table with rows
+each row with data-occupation, data-name, data-age
+restrict rows with duplicate occupation and age
+
+
+
+
