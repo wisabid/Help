@@ -169,6 +169,22 @@ How to force https instead of git
 	Ref : https://coderwall.com/p/sitezg/force-git-to-clone-with-https-instead-of-git-urls
 
 
+If you are facing proxy issues while cloning (such as Received HTTP code 502 from proxy after CONNECT) (Dated 10/1/2018)
+	DO THESE
+		SET HTTP_PROXY=
+		SET HTTPS_PROXY=
+		git config --global --unset http.proxy
+		git config --global --unset https.proxy
+		git clone http://yourUser@stashAddress:stashPort/apptest.git
+
+But if you need to connect to public repositories like github, then it's necessary to define proxies again:
+		SET HTTP_PROXY=proxyaddress:port
+		SET HTTPS_PROXY=proxyaddress:port
+		git config --global http.proxy http://proxyaddress:port
+		git config --global https.proxy http://proxyaddress:port
+Ref : https://stackoverflow.com/questions/34748475/git-clone-error-http-code-504-from-proxy-after-connect
+
+
 
 
 
