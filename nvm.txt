@@ -1,0 +1,9 @@
+nvm
+
+nvm list
+
+nvm list available
+
+nvm install v6.10.3
+
+nvm use 6.10.3

@@ -1,0 +1,36 @@
+show dbs
+db
+use mydb
+db.users.insert([
+	{
+		name : 'Alfie',
+		email : 'alfie@gmail.com',
+		username : 'imalfie'
+	},
+	{
+		name : 'Shab',
+		email : 'shab@gmail.com',
+		username : 'shab'
+	},
+	{
+		name : 'Alf Alvin',
+		email : 'alfalv@gmail.com',
+		username : 'alfalv'
+	},
+	{
+		name : 'Alfie',
+		email : 'alfie@gmail.com',
+		username : 'imalfie'
+	}
+])
+
+db.users.find()
+
+db.users.find().pretty()
+
+db.users.updateOne(
+	{name : 'Alfie'},
+	{ $set : { email : 'alfie123@gmail.com'}}
+)
+
+db.users.remove({name: 'Alfie'})
