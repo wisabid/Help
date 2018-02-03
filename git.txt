@@ -186,6 +186,35 @@ Ref : https://stackoverflow.com/questions/34748475/git-clone-error-http-code-504
 
 
 
+After committing to stage area
+	git log 
+
+
+After Pulling to know the Diff
+	git diff HEAD
+
+Stages differences while committing
+	git diff --staged
+
+Unstaging files	 (to remove octodog.txt file from staged)
+	git reset octofamily/octodog.txt
+
+
+Files can be changed back to how they were at the last commit by using the command:  (Go ahead and get rid of all the changes since the last commit for octocat.txt..coz the above octodog  still there. He's just not staged anymore.It would be great if we could go back to how things were before octodog came around and ruined the party.)
+	git checkout --octocat.txt
+
+Removing all thigns from a branch ( git rm command which will not only remove the actual files from disk, but will also stage the removal of the files for us.)
+	git rm '*.txt' (Dont forget the quotes)
+
+Merging branch to master (u r on master now)
+	git merge clean_up
+
+
+Delete a branch
+	git branch -d clean_up
+
+
+
 
 
 	
